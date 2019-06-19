@@ -1,1 +1,1 @@
-# Every native is required to create a branch with their first names, an underscore and the word branch E.g nonso_branch
+# clone the folder related to your name
