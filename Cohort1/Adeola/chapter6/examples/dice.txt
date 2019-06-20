@@ -1,0 +1,10 @@
+create a class DiceGame
+throw first die to obtain first number on face 1
+throw first die to obtain first number on face 2
+sum uo the outcome of face one and two
+on first throw, if sum is 7 or 11, you win
+on first throw, if sum is 2, 3 or 11, you win
+on first throw, if sum is 4,5,6,8,9 or 10, you win
+	sum becomes a variable
+	to win, keep rolling to get sum to equal x
+	if sum is 7 before acquiring x, you lust
