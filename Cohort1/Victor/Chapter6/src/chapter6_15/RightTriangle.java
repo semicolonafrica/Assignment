@@ -8,9 +8,9 @@ public class RightTriangle {
 		double side2Square = Math.pow(side2,2);
 		double hypotenuse = side1Square +side2Square;
 		
-		System.out.println(hypotenuse);
+		System.out.println("Hypotenuse Square is: "+hypotenuse);
 		
-		System.out.printf("hypotenuse is %.1f", Math.sqrt(hypotenuse));
+		System.out.printf("Hypotenuse is %.1f", Math.sqrt(hypotenuse));
 		return hypotenuse;	
 	}
 
