@@ -2,7 +2,7 @@ package chapter5.exercise5_15;
 
 
 /**
-* @author ken_granero
+* @author Emmanuel Akinbode
 *
 */
 public class AstericksTriangle {
