@@ -20,14 +20,14 @@ public class SquareofAsteriks {
 		}
 	}
 	
-	
-	
 	public static void main(String[] args) {
 		
 		Scanner input = new Scanner(System.in);
 			System.out.println("Enter number");
 			int number = input.nextInt();
+			
 			squareOfAsteriks(number);
+			
 			input.close();
 	}
 
