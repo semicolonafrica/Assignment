@@ -3,7 +3,7 @@ package chapter6_exercises;
 import java.util.Scanner;
 
 public class SquareofAsteriks {
-//Exercise 6.17
+//Exercise 6.18
 //Program to display square of asteriks
 //Written by Oyemade Temitope
 //20th of June 2019
