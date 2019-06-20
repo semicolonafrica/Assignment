@@ -1,0 +1,15 @@
+package exercise4_17;
+
+public class GasMileageTest {	
+
+		public static void main(String[] args) {
+			// TODO Auto-generated method stub
+		
+		GasMileage motor = new GasMileage;
+		System.out.print(motor.getTrip());
+		
+
+		}
+
+	}
+
