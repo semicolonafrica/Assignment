@@ -1,1 +1,1 @@
-# clone the folder related to your name
+# Work in folder related to your name
