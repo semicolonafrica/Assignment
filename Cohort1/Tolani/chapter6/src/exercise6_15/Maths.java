@@ -7,6 +7,11 @@ public class Maths {
 		return squareOfValue;
 	}
 	
+	public static int square(int value) {
+		int squareOfValue = value *  value;
+		return squareOfValue;
+	}
+	
 	
 	
 	public static double squareRoot(double value) {
