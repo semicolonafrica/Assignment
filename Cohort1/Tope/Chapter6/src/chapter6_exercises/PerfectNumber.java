@@ -13,6 +13,7 @@ public class PerfectNumber {
 		
 		for(int counter = 1; counter<number; counter++) {
 			remainder = number % counter;
+			
 			if(remainder == 0)
 				sum = sum + counter;
 			}
@@ -25,27 +26,32 @@ public class PerfectNumber {
 		return status;       
 	}
 	
+	
 	public static void displayPerfectNumbers(int number) {
 		
 		int sum = 0;
 		int remainder = 0;
 		int perfect = 0;
-		String status = "";
+		int counter;
 		
-		for(int counter = 1; counter<number; counter++) {
+		
+		for(counter = 1; counter<number; counter++) {
 			remainder = number % counter;
 			
-			if(remainder == 0) 
-				
+			if(remainder == 0) { 
 				sum = sum + counter;
-		
+				if((isPerfect(number) == true))
+				System.out.printf("%d ",counter);}
 			}
 		
 				if(sum == number)
 					perfect = number;	
 				
-		if(perfect !=0)	
-			System.out.println(perfect);
+		if(perfect !=0) {	
+			System.out.printf("%15d%n",perfect);			
+		}
+		
+	
 		 
 		
 	}
@@ -53,9 +59,9 @@ public class PerfectNumber {
 	
 	public static void main(String[] args) {
 		
-		
-		for(int i = 1; i<=100; i++) 
-			displayPerfectNumbers(i);
+		System.out.printf("%s%20s%n", "Multiples", "Perfect Number");
+		for(int i = 1; i<=1000; i++) 
+		displayPerfectNumbers(i);
 		
 	}
 
