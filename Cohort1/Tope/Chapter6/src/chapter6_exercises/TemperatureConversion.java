@@ -32,6 +32,7 @@ public class TemperatureConversion {
 		if(choice ==1) {
 			System.out.println("Enter Fahrenheit value");
 			int fahreinheit = input.nextInt();
+			//added hexadecimal equivalent of degrees
 			System.out.printf("%.2f\u00B0C",celsius(fahreinheit));
 		}
 		
@@ -39,6 +40,7 @@ public class TemperatureConversion {
 		if(choice == 2) {
 			System.out.println("Enter celsius value");
 			int celsius = input.nextInt();
+			//added hexadecimal equivalent value of degrees
 			System.out.printf("%.2f\u00B0F", (fahrenheit(celsius)));
 		}
 		input.close();
