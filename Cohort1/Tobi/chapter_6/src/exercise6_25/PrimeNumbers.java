@@ -2,36 +2,70 @@ package exercise6_25;
 
 public class PrimeNumbers {
 	
-	public static void findPrime() {
-		int number = 100000;
-		int prime = 0;
+	public static boolean findPrime(int number ) {
+		
+		int prime = 0, div = 0;
+		boolean result = false;
 		 // divide number by 2
-		for(int n = 1; n <= number; n++) {
-			int div = n / 2;
-			
-			
+			div = number  / 2;
+
 			for(int f = 2; f <= div; f++) 
 			{
-				 prime = n % f;
-				 if(prime == 0 )
+				if(number ==2 || number == 3) {
+					
+					div = number / 1;
+					result = true;
+				}
+				 prime = number % f;
+				 if(prime == 0 ) {
+					 result = false;
 					 break;
-			}
-			if (prime != 0)
-				System.out.print(n + "  ");
-//			if(n % 5 == 0) {
-//				System.out.println();
-//			}
+				 }
+			} // end of loop 
 			
+			if (prime != 0)
+//				System.out.print(n + "  ");
+				result = true;
+			
+			return result;
 		}	
 					
+
+	public static void primeRoot() {
+		int range = 100;double root;
+		int prime = 0;
+		
+		for(int t = 1; t <= range; t++) {
+			
+				root = Math.sqrt(t);
+			
+			for(int r = 2; r < root; r++) {
+
+					prime = t % r;
+					
+				if(prime == 0) 
+					break;	
+			}
+			
+			if(t == 2) {
+				prime = 2;
+			}
+			if(t == 3) {
+				prime = 3;
+			}
+			
+			
+		if (prime != 0 && findPrime(t) == true)
+				System.out.print(t + " ");
+	}// end of loop 
 }
+		
 
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-//		for(int g = 1; g <= 100; g++) {
-			findPrime();
+
+//			findPrime();
+			primeRoot();
 		
 		
 
