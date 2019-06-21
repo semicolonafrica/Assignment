@@ -4,7 +4,7 @@
 package chapter6.exercise6_15;
 
 /**
- * @author USER
+ * @author Emmanuel Akinbode
  *
  */
 public class HypotenuseCalculatorTest {
