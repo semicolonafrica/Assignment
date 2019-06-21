@@ -6,7 +6,7 @@ package chapter6.exercise6_15;
 import java.util.Scanner;
 
 /**
- * @author USER
+ * @author Emmanuel Akinbode
  *
  */
 public class HypotenuseCalculator {
