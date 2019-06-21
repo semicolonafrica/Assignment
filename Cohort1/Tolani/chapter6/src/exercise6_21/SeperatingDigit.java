@@ -1,15 +1,19 @@
 package exercise6_21;
 
+import exercise6_15.Maths;
+
 public class SeperatingDigit {
 	
-	public static int divide(int number1,int number2) {
-		int quotient =  number1 / number2;
-		return quotient;
-	}
-	
-	public static int findRemainder(int number1,int number2) {
-		int remainder =  number1 % number2;
-		return remainder;
-	}
+		public static String displayDigits(int number) {
+		int remainder = 0;
+		String space = " ";
+		while(number>0) {
+			remainder = Maths.remainder(number,10);	
+			space = remainder+ " " +space;
+			number = Maths.quotient(number,10);
+			
+		}
+		return space;
 
+	}
 }
