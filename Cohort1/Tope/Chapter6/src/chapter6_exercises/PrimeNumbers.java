@@ -14,7 +14,7 @@ public class PrimeNumbers {
 			
 			if(number % i ==0)
 				primeDeterminant++;
-		}
+			}
 		
 		if(primeDeterminant > 2)
 			primeStatus = false;
@@ -25,19 +25,13 @@ public class PrimeNumbers {
 	}
 	
 	public static void  displayPrimeNumbers() {
-		
 		for(int i = 1; i<=100; i++) {
-			
 			if(isPrime(i) == true)
-				System.out.println(i);
-			
+				System.out.println(i);	
 		}
-		
 	}
 	
 	public static void main(String[] args) {
-		
-		//System.out.println(isPrime(11));
 			displayPrimeNumbers();
 	}
 
