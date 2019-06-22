@@ -1,4 +1,4 @@
-package chapter4.exercise4_22;
+package exercise4_22;
 
 
 public class TabularLoop {

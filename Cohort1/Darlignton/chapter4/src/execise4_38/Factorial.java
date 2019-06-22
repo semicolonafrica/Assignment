@@ -1,4 +1,5 @@
-package chapter4.execise4_38;
+package execise4_38;
+
 
 public class Factorial {
 

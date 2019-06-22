@@ -1,4 +1,4 @@
-package chapter4.exercise4_38;
+package exercise4_38;
 
 import java.util.Scanner;
 public class Encryption {

@@ -1,4 +1,6 @@
-package chapter4.exercise4_32;
+package exercise4_32;
+
+
 import java.util.Scanner;
 public class Palindromes {
 

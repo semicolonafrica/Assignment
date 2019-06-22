@@ -1,4 +1,6 @@
-package chapter3.exercise3_12;
+package exercise3_12;
+
+
 
 public class Invoice{
     private String number;

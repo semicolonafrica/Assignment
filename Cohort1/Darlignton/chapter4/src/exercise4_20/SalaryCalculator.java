@@ -1,4 +1,6 @@
-package chapter4.exercise4_20;
+package exercise4_20;
+
+
 
 import java.util.Scanner;
 

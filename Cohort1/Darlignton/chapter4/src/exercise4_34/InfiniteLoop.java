@@ -1,4 +1,5 @@
-package chapter4.exercise4_34;
+package exercise4_34;
+
 
 public class InfiniteLoop {
 

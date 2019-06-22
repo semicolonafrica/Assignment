@@ -1,4 +1,4 @@
-package chapter4.exercise4_33;
+package exercise4_33;
 
 
 public class CheckerBoard {

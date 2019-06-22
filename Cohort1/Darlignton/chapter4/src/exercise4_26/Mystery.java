@@ -1,4 +1,4 @@
-package chapter4.exercise4_26;
+package exercise4_26;
 
 
 public class Mystery {

@@ -1,4 +1,5 @@
-package chapter4.exercise4_35;
+package exercise4_35;
+
 
 public class WrongCode {
 

@@ -1,4 +1,6 @@
-package chapter4.exercise4_36;
+package exercise4_36;
+
+
 
 import java.util.Scanner;
 public class Triangle {
