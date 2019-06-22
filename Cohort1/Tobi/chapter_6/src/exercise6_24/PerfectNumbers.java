@@ -9,11 +9,13 @@ public class PerfectNumbers {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		
-		System.out.println("Enter number between 1 - 1000");
-		long num = in.nextLong();
+//		System.out.println("Enter number between 1 - 1000");
+//		long num = in.nextLong();
+//		
+//		
+//		System.out.println(isPerfect(num) ? "is Perfect" : "is not Perfect");
 		
-		
-		System.out.println(isPerfect(num) ? "is Perfect" : "is not Perfect");
+		displayPerfect_n();
 
 	}
 	public static boolean isPerfect(long number) {
@@ -27,16 +29,21 @@ public class PerfectNumbers {
 			
 			if(temp == 0) {
 				sum += i;
-				store = store + i + "  ";
+				store = store + i + ", ";
 			}
 		}
 			if(sum == number) {
-				System.out.printf("Factors of %d = %s%nSum of factors = %d%n", number, store, sum);
-				return true;
+			System.out.println("" + store + "= " + sum);
 			}
-			else
-				return false;
+			return true;
+			
+	}
+	
+	public static void displayPerfect_n() {
 		
+		for(long i = 1; i <= 1_000_00; i++) {
+				isPerfect(i);
+		}
 	}
 
 }

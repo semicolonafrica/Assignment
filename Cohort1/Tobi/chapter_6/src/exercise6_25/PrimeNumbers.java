@@ -39,7 +39,7 @@ public class PrimeNumbers {
 			
 				root = Math.sqrt(t);
 			
-			for(int r = 2; r < root; r++) {
+			for(int r = 2; r <= root; r++) {
 
 					prime = t % r;
 					
@@ -55,7 +55,7 @@ public class PrimeNumbers {
 			}
 			
 			
-		if (prime != 0 && findPrime(t) == true)
+			if (prime != 0)
 				System.out.print(t + " ");
 	}// end of loop 
 }

@@ -1,6 +1,6 @@
 package exercise6_21;
+//Program display numbers separated by spaces
 
-import java.util.Scanner;
 
 public class Digits {
 

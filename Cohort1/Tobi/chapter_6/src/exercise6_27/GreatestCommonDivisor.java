@@ -1,15 +1,17 @@
 package exercise6_27;
+
+import java.util.Scanner;
+
 //This program returns the greatest common divisor of two numbers
 //using the euclid algorithm
 
 public class GreatestCommonDivisor {
 
 	//calculates and returns the greatest common divisor between two number using 
-	//euclid algorithm
+	//euclidian algorithm a = b(q) + r;
 	public static int  findGCD(int num1, int num2) {
 		int a, b;
-		int quotient; // stores the divsor of a and b
-		int remainder ; // stores remainder of division
+		int remainder = 0; // stores remainder of division
 
 		if(num1 > num2) {
 			a = num1;
@@ -19,22 +21,35 @@ public class GreatestCommonDivisor {
 		  a = num2;
 		  b = num1;
 		}
-			remainder = a % b;
-			quotient = a / b;
-			
+				
+				remainder = modulo(a, b);
+				
 			while (remainder > 0) {
-			quotient = b / remainder; 
-			b = remainder;
-//			System.out.println;(b + "===")
-			remainder = b % remainder;
-//			System.out.println(quotient + "==" + remainder);
-					
+				a = b;
+				
+				b = remainder;
+				
+				remainder = modulo(a, b);
+			}
+			return b;
 		 }
-//		System.out.print(quotient + " " + remainder + " " + a + " " + b);
-		return quotient;
 		
-	}
+		
+
 	public static void main(String[] args) {
-		System.out.println(findGCD(24, 5));
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter two numbers: ");
+		int num1 = input.nextInt();
+		int num2 = input.nextInt();
+		
+		System.out.printf("GCD(%d, %d) = %d", num1, num2, findGCD(num1, num2));
+	}
+	
+	public static int modulo(int a, int b) {
+		int modulus = a % b;
+		
+		return modulus;
 	}
 }

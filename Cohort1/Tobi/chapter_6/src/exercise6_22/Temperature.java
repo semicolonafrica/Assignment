@@ -16,6 +16,19 @@ public class Temperature {
 		return celsius;
 	}
 	
+	public static double calculateTemperature(char type, double temp) {
+		double result = 0;
+		if(type == 'f') {
+			System.out.printf("Celsius equivalent is: %.2f~C", celsius(temp));
+		}
+		else if (type == 'c') {
+			System.out.printf("Fahrenheit equivalent is: %.2f~F", fahrenheit(temp));
+		}
+		
+		
+		return result;
+	}
+	
 	
 }
 	
