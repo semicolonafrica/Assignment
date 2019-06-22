@@ -48,7 +48,7 @@ public class PerfectNumber {
 					perfect = number;	
 				
 		if(perfect !=0) {	
-			System.out.printf("%15d%n",perfect);			
+			System.out.printf("%2d%n",perfect);			
 		}
 		
 	
@@ -59,7 +59,7 @@ public class PerfectNumber {
 	
 	public static void main(String[] args) {
 		
-		System.out.printf("%s%20s%n", "Multiples", "Perfect Number");
+		//System.out.printf("%s%20s%n", "Multiples", "Perfect Number");
 		for(int i = 1; i<=1000; i++) 
 		displayPerfectNumbers(i);
 		
