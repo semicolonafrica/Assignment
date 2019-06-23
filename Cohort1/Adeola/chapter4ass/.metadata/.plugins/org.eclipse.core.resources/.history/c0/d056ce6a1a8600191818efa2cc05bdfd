@@ -1,0 +1,15 @@
+package calculator;
+
+public class CreditLimitCalTest {
+
+	public static void main(String[] args) {
+		
+		CreditLimitCalculator customer1 = new CreditLimitCalculator(1, 1, 1, 2, 4, 1);
+		
+				
+//		System.out.println(customer1.newBalance());
+		System.out.println(customer1.checkNewBalance());
+
+	}
+
+}
