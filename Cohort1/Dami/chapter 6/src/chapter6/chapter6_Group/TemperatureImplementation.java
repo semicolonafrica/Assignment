@@ -8,7 +8,7 @@ public class TemperatureImplementation {
 		System.out.println("Type 2: to convert from Fahrenheit to Celcius");
 		
 		int picker = input.nextInt();
-		if(picker <1 && picker > 2) {
+		if(picker <1 || picker > 2) {
 			System.out.println("Wrong, See the instruction displayed above,");
 			
 			picker = input.nextInt();
