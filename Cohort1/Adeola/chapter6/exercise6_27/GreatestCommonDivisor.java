@@ -12,12 +12,10 @@ public class GreatestCommonDivisor {
 				System.out.print(i);
 				break;
 			}
-		}
-		
+		}		
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		gcd();
 	}
 
