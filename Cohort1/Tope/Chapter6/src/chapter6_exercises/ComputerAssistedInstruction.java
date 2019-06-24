@@ -26,32 +26,52 @@ public class ComputerAssistedInstruction {
 	
 	public static void askQuestion() {
 		
-		System.out.println("Answer quiz or -1 to end\n");
 		Scanner input = new Scanner(System.in);
 		int answer = 0;
 		int correctAnswer;
+		int inCorrectAnswerCounter = 0;
+		int answerCounter = 0;
 		
-		while(answer != -1) {
-		answer = 0;
+		while(answerCounter <=10) {
+			
 		 correctAnswer = generateQuestions(answer);
-		answer = input.nextInt();
+		 answer = input.nextInt();
+		 answerCounter++;
 		
-		if(answer == correctAnswer)
+		if(answer == correctAnswer) {
 			System.out.println(generateCommentforCorrectAnswers());
+		
+		}
 		
 		else {
 			
 			while(answer != correctAnswer) {
-				if(answer == -1)
-					break;
-				
 				System.out.println(generateCommentforNegativeAnswers());
 				answer = input.nextInt();
-					
-				if(answer == correctAnswer)
+				answerCounter++;
+				inCorrectAnswerCounter++;
+				if(answerCounter == 10)
+					break;
+				
+				
+				if(answer == correctAnswer) {
 					System.out.println(generateCommentforCorrectAnswers());
+				}
 			}
 			
+		}
+		
+		
+		if(answerCounter == 10) {
+				double average = inCorrectAnswerCounter * 0.75;
+			
+			if(average > 3.5)
+				System.out.println("Please ask your teacher for extra help.");
+					
+			if(average < 3.5)
+			System.out.println("Congratulations, you are ready to go to the next level!");
+			
+			break;
 		}
 		
 		}
