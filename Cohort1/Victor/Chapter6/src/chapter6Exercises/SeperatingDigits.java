@@ -12,6 +12,7 @@ public class SeperatingDigits {
 		int number = input.nextInt();
 		
 		SeperatingDigits.getDigits(number);
+		input.close();
 	}
 	
 	public static void getDigits(int number) {

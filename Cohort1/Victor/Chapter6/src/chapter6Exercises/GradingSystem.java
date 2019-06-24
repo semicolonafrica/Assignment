@@ -4,11 +4,6 @@ import java.util.Scanner;
 
 public class GradingSystem {
 	
-//	6.28 Write a method qualityPoints that inputs a student’s average and returns 4 if it’s 90–100,
-//	3 if 80–89, 2 if 70–79, 1 if 60–69 and 0 if lower than 60. Incorporate the method 
-//	into an application
-//	that reads a value from the user and displays the result.
-	
 	public static void qualityPoints() {
 		Scanner input = new Scanner(System.in);
 		
@@ -21,34 +16,29 @@ public class GradingSystem {
 				System.out.println("End of session");
 				break;
 			}
-		GradingSystem.qualityPoints(average);
+		System.out.println("The students grade is: "+GradingSystem.qualityPoints(average));
 		}
 		
 		input.close();
 	}
 	
-	public static int qualityPoints(int average) {
+	public static String qualityPoints(int average) {
 		
 		switch (average/10) {
 		
 		case 9:
 		case 10:
-			System.out.println("4");
-			break;
+			return "4";
 		case 8:
-			System.out.println("3");
-			break;
+			return "3";
 		case 7:
-			System.out.println("2");
-			break;
+			return "2";
 		case 6:
-			System.out.println("1");
-			break;
+			return "1";
 		default:
-			System.out.println("0");
+			return "0";
 		}
-		return average;
-		
+
 	}
 
 }

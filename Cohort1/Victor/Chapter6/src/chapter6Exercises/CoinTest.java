@@ -1,10 +1,11 @@
 package chapter6Exercises;
 
-public class PrimeNumberTest {
+public class CoinTest {
 
 	public static void main(String[] args) {
-		PrimeNumbers.isPrime();
 		
+		Coin.flipCoin();
+
 	}
 
 }

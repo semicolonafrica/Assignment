@@ -20,10 +20,10 @@ public class EvenOrOddNumber{
 	public static void isEven(int number) {
 		
 		if(number % 2 ==0) {
-			System.out.println("True");
+			System.out.println("True ");
 		}
 		else {
-			System.out.println("False");
+			System.out.println("False ");
 		}
 	}
 

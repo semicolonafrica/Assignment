@@ -1,7 +1,8 @@
 package chapter6Exercises;
 
+import java.util.Scanner;
+
 public class PrimeNumbers {
-	
 //	Prime Numbers) A positive integer is prime if it’s divisible by only 1 and itself. For example,
 //	2, 3, 5 and 7 are prime, but 4, 6, 8 and 9 are not. The number 1, by definition, is not prime.
 //	a) Write a method that determines whether a number is prime.
@@ -11,20 +12,28 @@ public class PrimeNumbers {
 //	c) Initially, you might think that n/2 is the upper limit for which you must test to see
 //	whether a number n is prime, but you need only go as high as the square root of n. Rewrite
 //	the program, and run it both ways.
-//	6.26 (Reversing Digits) Write a method that takes an
-	
-	public static int  findPrimeNumber(int number) {
+	public static void isPrime() {
 		
-		int primeNumber = 0;
-		for (int counter =1; counter <= number;counter ++) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter number between 1 - 1000 ");
+			int number = input.nextInt();
 			
-			if(number %1!=0 && number%counter!=0) {
-				primeNumber = counter;
-				System.out.println(primeNumber);
-			}
+		System.out.println("Prime Numbers between 1 and "+ number+ " are:");
+		for(int counter =1; counter <= number; counter ++)
+			if(isPrime(counter)==true)
+			System.out.printf("%d%n", counter);
+		input.close();
 		}
-		return primeNumber;
-		
+	
+	public static boolean  isPrime(int number) {	
+//		int largest = (int) Math.sqrt(number);
+		if (number <2)
+			return false;
+		for(int counter=2; counter <= number/2; counter++){
+			if (number%counter ==0 )
+				return false;				
 	}
-
+		return true;
+	}
 }

@@ -1,10 +1,8 @@
 package chapter6Exercises;
 
-public class PrimeNumberTest {
+public class GreatestDivisorTest {
 
 	public static void main(String[] args) {
-		PrimeNumbers.isPrime();
-		
+		GreatestDivisor.gcd();
 	}
-
 }

@@ -16,7 +16,8 @@ public class Temperature {
 			System.out.println("Fahrenheit to celsius is: "+ Temperature.celsius(fahrenheit));	
 
 			System.out.println("Celsius to fahrenheit is: " +Temperature.fahrenheit(celsius));	
-	
+			
+			input.close();
 	}
 	
 	public static double celsius(double fahrenheit) {
