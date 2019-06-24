@@ -28,6 +28,8 @@ public class Exponentiation {
 		for(int i=1; i<=exponent; i++) {
 
 			value1 = value1 *value;
+			
+			
 		}
 
 		System.out.println( value1);
