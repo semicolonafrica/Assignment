@@ -3,15 +3,11 @@ import java.util.Scanner;
 public class ReversingDigits {
 	
 	public static void reversingDigits(int number){
-		String store = " ";
-		int remainder = 0;
+		String store = " ";		int remainder = 0;		
 		
-		
-		while(number != 0) {
-			
+		while(number != 0) {			
 			remainder = number % 10;
-			store = remainder + " "+ store;
-			
+			store = remainder + " "+ store;			
 			number = number / 10;
 			
 			System.out.print(remainder);
