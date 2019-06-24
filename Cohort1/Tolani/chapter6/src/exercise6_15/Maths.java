@@ -14,12 +14,12 @@ public class Maths {
 	
 	
 	
-	public static double squareRoot(double value) {
+	public static double squareRoot(double add) {
 		double squareRoot = 0;
 		int i;
-		for(i =1;i<value;i++) {
-			if(i == value/i) {
-				squareRoot = i;
+		for(i =1;i<add;i++) {
+			if(i == add/i) {
+				squareRoot = (double)i;
 			}
 		}
 		return squareRoot;
