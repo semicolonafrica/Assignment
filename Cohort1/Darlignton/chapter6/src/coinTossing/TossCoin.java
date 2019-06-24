@@ -10,8 +10,8 @@ public class TossCoin {
 	public enum Coin {HEADS, TAILS};
 
 	public static void toss() {
-		char sentinel = 'd';
-		char tossCoin = 'p';
+//		char sentinel = 'd';
+//		char tossCoin = 'p';
 		
 		TossCoin.flip();
 		
@@ -32,6 +32,7 @@ public class TossCoin {
 		int tailCount = 0;
 		
 		for (    ; play == 'p' || play == 'P' ;   ) {
+			
 			int side = 1 + randomNumbers .nextInt(2);
 			
 			switch(side) {
@@ -43,6 +44,7 @@ public class TossCoin {
 				System.out.println(coinSides.TAILS);
 				tailCount++;
 				break;
+			
 			}
 			
 			System.out.printf("%d head(s) tossed %n",headCount);
