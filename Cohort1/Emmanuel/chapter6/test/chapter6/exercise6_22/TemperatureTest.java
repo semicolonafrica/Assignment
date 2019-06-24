@@ -21,11 +21,11 @@ public class TemperatureTest {
 		
 		System.out.println("Ente 1 to calculate Celsius OR 2 to calculate Fahrenheit!");
 		int check = input.nextInt();
-		 System.out.println("Enter value: ");
+		System.out.println("Enter value: ");
 		int value = input.nextInt();
 		
 		 double celsius = Temperature.calCelsius(value);
-		  double fahrenheit = Temperature.calFahrenheit(value);
+		 double fahrenheit = Temperature.calFahrenheit(value);
 		
 		  
 		 if (check == 1) {
