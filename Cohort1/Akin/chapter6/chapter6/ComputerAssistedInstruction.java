@@ -17,12 +17,24 @@ public class ComputerAssistedInstruction {
 			double percentCorrect = 0;
 			//double percentWrong = 0;
 			int sentinel = 1;
+			int difficult = 1;
+			int number1 = 1;
+			int number2 = 1;
 			while(sentinel == 1) {
 				Student getStatus = Student.reset;
-				
+				System.out.print("Enter the difficulty level\n1 for easy\n2 for hard.");
+				difficult = input.nextInt();
 			for(int i = 1; i <= 10; i++) {
-			int number1 = random.nextInt(10);
-			int number2 = random.nextInt(10);
+				
+				if(difficult == 1) {
+					number1 = random.nextInt(10);
+					number2 = random.nextInt(10);
+				} else if(difficult == 2) {
+					number1 =10 + random.nextInt(40);
+					number2 =10 + random.nextInt(40);	
+				}
+			
+			
 			
 			System.out.print(message(number1,number2));
 			System.out.println();
