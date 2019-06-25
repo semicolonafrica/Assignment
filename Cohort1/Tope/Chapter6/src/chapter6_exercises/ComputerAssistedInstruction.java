@@ -181,8 +181,8 @@ public class ComputerAssistedInstruction {
 	
 	public static double generateDivisionQuestions(double answer) {
 		
-		double number1 =  2* 1+ random.nextInt(10);
-		double number2 = 1+ random.nextInt(10);
+		double number1 =  2* random.nextInt(15);
+		double number2 = 2 *1+ random.nextInt(3);
 		
 		System.out.printf("What is %.0f divided by %.0f%n", number1 , number2);
 		answer = number1 / number2 ;
