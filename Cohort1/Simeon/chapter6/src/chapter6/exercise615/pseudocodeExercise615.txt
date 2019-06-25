@@ -1,0 +1,12 @@
+
+initialise side1
+initialise side2'
+initialise hypotenuse
+
+side1 *side 1 + side2*side2 equals hypotenuse*hypotenuse
+
+hypotenuse = square root of side1^2 + side2^2
+
+print hypotenuse
+
+ 

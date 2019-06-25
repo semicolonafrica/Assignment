@@ -1,0 +1,21 @@
+
+import Scanner
+
+create object input from scanner
+
+collect input from user number of pairs to be collected
+prompt user for first integer
+initialise to variable x
+prompt user for second integer
+initialise to variable y
+
+for counter initialise to 1
+	counter less or equals number of pairs
+	increment counter
+	
+	if y remainder x equals zero
+		print  true
+	else
+		print false
+		
+

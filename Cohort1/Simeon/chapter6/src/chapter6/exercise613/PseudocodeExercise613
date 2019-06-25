@@ -1,0 +1,26 @@
+PSEUDOCODE
+
+declare variable
+
+a) while hasNext
+		randomise variable with range even number 2 to 10
+		if variable is divisble by 2
+			print random number
+			break
+
+b) while hasNext
+		randomise variable with range odd number 3 to 11
+		if random number is not divisble by 2
+			print random number
+			break
+		
+c) while hasNext
+		randomise variable with range 6 to 22
+		if random number modulus 4 equals 2
+			print random number
+			break
+			
+
+
+ 
+

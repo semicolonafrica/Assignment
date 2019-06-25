@@ -2,7 +2,7 @@ package chapter6.exercise610;
 
 public class RoundingNumber {
 	
-	 static double  x = 5.456345;
+	 static double x = 5.456345;
 	 static double y;
 	
 		

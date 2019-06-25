@@ -5,7 +5,7 @@ public class RoundingNumberTest {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		System.out.printf("Original value: %.5f%n", 5.456345);
+//		System.out.printf("Original value: %.5f%n", x);
 		
 		System.out.print("Integer ");
 		RoundingNumber.roundToInteger();
