@@ -10,11 +10,7 @@ public class TossCoin {
 	public enum Coin {HEADS, TAILS};
 
 	public static void toss() {
-//		char sentinel = 'd';
-//		char tossCoin = 'p';
-		
 		TossCoin.flip();
-		
 	}
 	
 	public static void flip() {
@@ -57,20 +53,12 @@ public class TossCoin {
 		      play =  input.next().charAt(0);
 		}
 			
-
-			      
-
-			
-			
 }
 	
 	public static void main(String args[]) {
 		TossCoin.toss();
 	}
 }
-
-
-
 
 //
 //import java.util.Scanner;
