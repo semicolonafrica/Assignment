@@ -4,7 +4,7 @@ import java.security.SecureRandom;
 import java.util.Scanner;
 
 //Application that helps elementary School student learn multiplication
-//Exercise 6.35, 6.36, 6.37 & 6.38
+//Exercise 6.35, 6.36, 6.37, 6.38 & 6.39
 //Program written by Oyemade Temitope
 //24th of June 2019
 
@@ -12,7 +12,7 @@ public class ComputerAssistedInstruction {
 	
 	final static SecureRandom random = new SecureRandom();
 	
-	public static int generateQuestionsForLevelOne(int answer){
+	public static int generateMultiplicationQuestions(double answer){
 		
 		
 		int number1 = 1+ random.nextInt(10);
@@ -21,41 +21,42 @@ public class ComputerAssistedInstruction {
 		System.out.printf("What is %d times %d%n", number1 , number2);
 		answer = number1 * number2 ;
 		
-		return answer;
+		return (int) answer;
 		
 	}
 	
-	public static int generateQuestionsForLevelTwo(int answer) {
-		int number1 = 6+ random.nextInt(10);
-		int number2 = 6+ random.nextInt(10);
-		
-		System.out.printf("What is %d times %d%n", number1 , number2);
-		answer = number1 * number2 ;
-		
-		return answer;
-	}
 	
 	public static void askQuestion() {
 		
 		Scanner input = new Scanner(System.in);
-		int answer = 0;
-		int correctAnswer = 0;
+		double answer = 0;
+		double correctAnswer = 0;
 		int inCorrectAnswerCounter = 0;
 		int answerCounter = 0;
-		int level;
+		int option;
 		
-		System.out.println("Enter difficulty Level (1 or 2)");
-		level = input.nextInt(3);
+		System.out.println("Enter\n1 for Addition\n2 for Subtraction\n3 for Multiplication\n4 for Division\n5 for Random mixture");
+		option = input.nextInt(6);
 		
 		while(answerCounter <=10) {
 			
-			if(level == 1)
-		 correctAnswer = generateQuestionsForLevelOne(answer);
+			if(option == 1)
+		 correctAnswer = generateAdditionQuestions(answer);
 			
-			if(level == 2)
-				correctAnswer = generateQuestionsForLevelTwo(answer);
+			if(option == 2)
+				correctAnswer = generateSubtractionQuestions(answer);
 			
-		 answer = input.nextInt();
+			if(option ==3)
+				correctAnswer = generateMultiplicationQuestions(answer);
+			
+			if(option == 4)
+				correctAnswer = generateDivisionQuestions(answer);
+			
+			if(option == 5)
+				correctAnswer = generateRandomQuestions(answer);
+		
+			
+		 answer = input.nextDouble();
 		 answerCounter++;
 		
 		if(answer == correctAnswer) {
@@ -66,7 +67,7 @@ public class ComputerAssistedInstruction {
 		else {
 			
 			while(answer != correctAnswer) {
-				System.out.println(generateCommentforNegativeAnswers());
+				System.out.println(generateCommentforWrongAnswers());
 				answer = input.nextInt();
 				answerCounter++;
 				inCorrectAnswerCounter++;
@@ -96,9 +97,7 @@ public class ComputerAssistedInstruction {
 		
 		}
 		input.close();
-		
-		
-		
+	
 	}
 	
 	
@@ -132,7 +131,7 @@ public class ComputerAssistedInstruction {
 	}
 	
 	
-	public static String generateCommentforNegativeAnswers() {
+	public static String generateCommentforWrongAnswers() {
 		int number = random.nextInt(4);
 		String remark = " ";
 		String r1 = "No! Please try again";
@@ -155,8 +154,65 @@ public class ComputerAssistedInstruction {
 			break;
 		
 		}
-		
 		return remark;
+	}
+	
+	public static int generateAdditionQuestions(double answer) {
+		
+		int number1 = 12+ random.nextInt(50);
+		int number2 = 30+ random.nextInt(40);
+		
+		System.out.printf("What is %d plus %d%n", number1 , number2);
+		answer = number1 + number2 ;
+		
+		return (int) answer;
+	}
+	
+	public static int generateSubtractionQuestions(double answer) {
+		
+		int number1 = 30+ random.nextInt(100);
+		int number2 = 10+ random.nextInt(69);
+		
+		System.out.printf("What is %d minus %d%n", number1 , number2);
+		answer = number1 - number2 ;
+		
+		return (int) answer;
+	}
+	
+	public static double generateDivisionQuestions(double answer) {
+		
+		double number1 =  2* 1+ random.nextInt(10);
+		double number2 = 1+ random.nextInt(10);
+		
+		System.out.printf("What is %.0f divided by %.0f%n", number1 , number2);
+		answer = number1 / number2 ;
+		
+		return answer;
+	}
+	
+	public static double generateRandomQuestions(double answer) {
+		
+		double question = 0;
+		int questionSelector = 1 + random.nextInt(4);
+		
+		switch(questionSelector) {
+		case 1:
+			question = generateAdditionQuestions(answer);
+			break;
+		case 2:
+			question = generateSubtractionQuestions(answer);
+			break;
+		case 3:
+			question = generateMultiplicationQuestions(answer);
+			break;
+		case 4: 
+			question = generateDivisionQuestions(answer);
+			break;
+		
+		}
+		
+		return question;
+		
 		
 	}
 	
