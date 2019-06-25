@@ -4,14 +4,15 @@ import java.security.SecureRandom;
 import java.util.Scanner;
 
 //Application that helps elementary School student learn multiplication
-//Exercise 6.35 & 6.36
+//Exercise 6.35, 6.36, 6.37 & 6.38
 //Program written by Oyemade Temitope
 //24th of June 2019
 
 public class ComputerAssistedInstruction {
 	
 	final static SecureRandom random = new SecureRandom();
-	public static int generateQuestions(int answer){
+	
+	public static int generateQuestionsForLevelOne(int answer){
 		
 		
 		int number1 = 1+ random.nextInt(10);
@@ -24,17 +25,36 @@ public class ComputerAssistedInstruction {
 		
 	}
 	
+	public static int generateQuestionsForLevelTwo(int answer) {
+		int number1 = 6+ random.nextInt(10);
+		int number2 = 6+ random.nextInt(10);
+		
+		System.out.printf("What is %d times %d%n", number1 , number2);
+		answer = number1 * number2 ;
+		
+		return answer;
+	}
+	
 	public static void askQuestion() {
 		
 		Scanner input = new Scanner(System.in);
 		int answer = 0;
-		int correctAnswer;
+		int correctAnswer = 0;
 		int inCorrectAnswerCounter = 0;
 		int answerCounter = 0;
+		int level;
+		
+		System.out.println("Enter difficulty Level (1 or 2)");
+		level = input.nextInt(3);
 		
 		while(answerCounter <=10) {
 			
-		 correctAnswer = generateQuestions(answer);
+			if(level == 1)
+		 correctAnswer = generateQuestionsForLevelOne(answer);
+			
+			if(level == 2)
+				correctAnswer = generateQuestionsForLevelTwo(answer);
+			
 		 answer = input.nextInt();
 		 answerCounter++;
 		
@@ -140,11 +160,7 @@ public class ComputerAssistedInstruction {
 		
 	}
 	
-	//Main method
-	public static void main(String[] args) {
-		
-		askQuestion();
-	}
+
 	
 
 }
