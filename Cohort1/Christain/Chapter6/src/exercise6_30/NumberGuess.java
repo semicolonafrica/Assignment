@@ -21,7 +21,7 @@ public class NumberGuess {
 		
 		
 		 value = 1 + randomNumbers.nextInt(10);
-		 while(menu == guess) {
+		 while(menu == 1) {
 			 System.out.print("Enter 1 to continue: ");
 			 guess = input.nextInt();
 			 break;
