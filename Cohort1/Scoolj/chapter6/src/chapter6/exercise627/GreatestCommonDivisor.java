@@ -2,7 +2,7 @@
  * 
  */
 package chapter6.exercise627;
-
+import java.util.Scanner;
 /**
  * @author Sxoolj, Oluwajuwonlo
  *
@@ -10,19 +10,31 @@ package chapter6.exercise627;
 public class GreatestCommonDivisor {
 	
 	public static int findGreatestCommonDivisor() {
-		
-		
+		Scanner input = new Scanner (System.in);
+	 	System.out.println(" Enter first Number");
+		int number1 = input.nextInt();
+		System.out.println(" Enter Second Number");
+		int number2 = input.nextInt();
+		int GreatCommonDivisorNumber = calculateGreatestCommonDivisor(number1, number2);
+		input.close();
+		return GreatCommonDivisorNumber;		
 	}
 	
-	public static double calculateGreatestCommonDivisor(double numberA, double numberB) {
+	public static int calculateGreatestCommonDivisor(int numberA, int numberB) {		
+		int counter= 0;
+		int intStore = 0;
 		
-		int divisorQuotient = (int) (numberA /numberB);
-		int divisionMod = (int)( numberA % numberB);
-		
-		for (int counter =1; counter <= divisionMod; counter++) {
+		for (counter =1; counter <= numberB; counter++) {
 			
-			numberB/divisionMod
-		}
+			if (numberA % counter == 0 && numberB % counter ==0) {
+				
+				intStore = counter;
+			} 
+			}
+		System.out.println(intStore);
+	
+	 
+		return counter;
 		
 	}
 
