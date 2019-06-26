@@ -1,4 +1,5 @@
 package exercise6_37;
+
 import java.security.SecureRandom;
 import java.util.Scanner;
 public class MonitoringStudentPerformance {
