@@ -4,7 +4,7 @@
 package chapter6.exercise627;
 import java.util.Scanner;
 /**
- * @author Sxoolj, Oluwajuwonlo
+ * @author Scoolj, Oluwajuwonlo
  *
  */
 public class GreatestCommonDivisor {
@@ -25,17 +25,14 @@ public class GreatestCommonDivisor {
 		int intStore = 0;
 		
 		for (counter =1; counter <= numberB; counter++) {
-			
+			// this finding remainder of the two inputs using counter to divide inputs
 			if (numberA % counter == 0 && numberB % counter ==0) {
 				
 				intStore = counter;
 			} 
 			}
 		System.out.println(intStore);
-	
-	 
 		return counter;
-		
 	}
 
 }
