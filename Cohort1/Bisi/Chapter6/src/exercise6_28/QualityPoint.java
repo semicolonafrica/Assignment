@@ -6,6 +6,11 @@ public class QualityPoint {
 	
 	public static void qualityPoint(int value){
 		
+		Scanner in = new Scanner(System.in);
+		
+		System.out.print("Enter value:");
+		value = in.nextInt();
+				
 		if(value >= 90 && value <= 100) {
 			System.out.println("4");
 		}
@@ -20,16 +25,11 @@ public class QualityPoint {
 		}
 		else if (value <= 59) {
 			System.out.println("0");
-			}
-		
+			}		
 	}
 	
 	public static void main(String [] args) {
-		
-		Scanner in = new Scanner(System.in);
-		
-		System.out.print("Enter number:");
-		int number = in.nextInt();
+			int number = 0;
 		
 	qualityPoint(number);
 	}

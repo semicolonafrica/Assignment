@@ -4,30 +4,31 @@ import java.util.Scanner;
 
 public class GreatestCommonDivisor {
 	
-	public static int gCD(int num, int value,int i) {
-		
-		for(i = 1; i <= num && i <= value; i++) {
-			
-			if(num % i == 0 && value % i == 0) {
-				int result = i;
-				}
-		}
-		return i;
-	}
-	
-	public static void main(String[] args) {
+	public static int gCD(int num, int num1) {
 		
 		Scanner in = new Scanner(System.in);		
 		
 		System.out.print("Enter first value:");
-		int value = in.nextInt();
+			num = in.nextInt();
 		
 
 		System.out.print("Enter second value:");
-		int value1 = in.nextInt();
+			num1 = in.nextInt();
 		
-		System.out.print("Greatest Common Divisor of this is: ");
-		
-		System.out.print(GreatestCommonDivisor.gCD(value1, value1, value1));
+				int a = 1;	int result = 1;
+		if(num >= a && num1 >= a) {
+			if(num % a == 0 && num1 % a == 0) {
+				result =+a;
+			}			
+		}
+		return result;
 	}
+	
+	public static void main(String[] args) {
+		
+			int value = 0;	int value1 = 0;		
+		
+		System.out.print("Greatest Common Divisor of is: " + gCD(value, value1));
+		
+		}
 }

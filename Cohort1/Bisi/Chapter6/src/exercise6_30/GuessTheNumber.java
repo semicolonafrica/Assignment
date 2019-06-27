@@ -6,35 +6,42 @@ import java.util.Scanner;
 
 public class GuessTheNumber {
 
-	public static void getNumber(int number) {
-		// TODO Auto-generated method stub
-	SecureRandom randomNumbers = new SecureRandom();
-		
-	int value = 1 + randomNumbers.nextInt(1000);
-		System.out.println(value);
-	
-		 if(number > value) {
-			 System.out.print("Too high, try again");
-			 }
-		 else if(number < value) {
-			 System.out.print("Too low, try again");
-		 }
-		 else if(number == value) {
-			System.out.print("Congratulations, you guessed the number!"); 
-		
-		 }
-	}
-	public static void main(String[] args) {
+	public static void getNumber(int value) {
 		
 		Scanner in = new Scanner(System.in);
+				int counter = 1;
+		while(value != -1) {
+		System.out.println("Guess a value:");
+			value = in.nextInt();
+	
+	SecureRandom randomNumbers = new SecureRandom();		
+			int number = 0;
+	  number = 1 + randomNumbers.nextInt(1000);
+		System.out.println(number);	
 		
-		int value = 0;
+		 if(number < value) {
+			 System.out.println("Too high, try again.");
+			 }
+		 else {
+			 if(number > value) {
+		 		 System.out.println("Too low, try again.");
+			 }
+		 else {
+			 if(number == value) {
+			System.out.println("Congratulations, you guessed the number!"); 
+			 }	
+			 counter++;
+			 
+		 }
+		 }
+	 }
+}
+
+	public static void main(String[] args) {
 		
-		System.out.println("Guess the number:");
-		 value = in.nextInt();
-		
-		getNumber(value);
+		int value = 0;	
+			
+			 getNumber(value);
 	}
 	
-
 }
