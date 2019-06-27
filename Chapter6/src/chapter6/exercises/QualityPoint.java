@@ -2,6 +2,10 @@ package chapter6.exercises;
 
 import java.util.Scanner;
 
+/**
+ * @author LEMON
+ *
+ */
 public class QualityPoint {
 
 	public static int checkResult(int number) {
@@ -27,9 +31,7 @@ public class QualityPoint {
 			result = 0;
 		}
 		return result;
-	}
-	
-	
+	}	
 	public static void main(String[] args) {
 		Scanner ops = new Scanner(System.in);
 		

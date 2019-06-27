@@ -2,6 +2,10 @@ package chapter6.exercises;
 
 import java.util.Scanner;
 
+/**
+ * @author LEMON
+ *
+ */
 public class RoundingNumber2 {
 
 //	public static void main(String[] args) {
@@ -25,7 +29,7 @@ public class RoundingNumber2 {
 		double x = Math.floor(numb * 1000 - 0.5) / 1000;
 		return x;
 	}
-
+	
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 

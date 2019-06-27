@@ -1,7 +1,12 @@
+
 package chapter6.exercises;
 
 import java.util.Scanner;
 
+/**
+ * @author LEMON
+ *
+ */
 public class PrimeNumbers {
 
 	public static boolean isPrime(int number) {
@@ -24,7 +29,6 @@ public class PrimeNumbers {
 
 		return checkPrime;
 	}
-
 	public static int displayPrimeNumbers() {
 		int result = 0;
 		

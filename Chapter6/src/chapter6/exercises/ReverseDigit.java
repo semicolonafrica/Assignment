@@ -2,6 +2,10 @@ package chapter6.exercises;
 
 import java.util.Scanner;
 
+/**
+ * @author LEMON
+ *
+ */
 public class ReverseDigit {
 
 	
@@ -16,8 +20,7 @@ public class ReverseDigit {
 		int value3 = remainder % 10;
 		System.out.printf("%d %s %d %d %d %d%n",number,"reverse is",value,value1,value2,value3);
 		
-	}
-		
+	}		
 	public static void main(String[] args) {
 			Scanner input = new Scanner(System.in);
 			
@@ -26,5 +29,4 @@ public class ReverseDigit {
 			
 			getReverse(numb);
 	}
-
 }

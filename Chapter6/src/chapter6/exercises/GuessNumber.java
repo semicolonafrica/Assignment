@@ -52,13 +52,11 @@ public class GuessNumber {
 						System.out.println("Ops 10th trial, Game Over!");
 						break;
 					}
-				}
-			
+				}			
 		}
 		while (numb != 0);
 		System.out.print(value);		
 	}
-
 	public static void main(String[] args) {
 		guess(0);
 	}

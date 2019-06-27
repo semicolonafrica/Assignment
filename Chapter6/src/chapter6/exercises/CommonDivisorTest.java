@@ -11,7 +11,6 @@ public class CommonDivisorTest {
 		int value = ops.nextInt();
 		int value1 = ops.nextInt();
 		
-		
 		CommonDivisor.checkDivisor(value,value1);
 	}
 

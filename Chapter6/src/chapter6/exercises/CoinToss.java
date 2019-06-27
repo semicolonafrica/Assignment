@@ -8,8 +8,7 @@ public class CoinToss {
 	private enum Status{ HEAD, TAIL} 			
 			static int head = 0;
 			static int tail = 0;
-				
-	
+					
 	public static void tossCoin(int numb) {	
 		SecureRandom randomNumbers = new SecureRandom();		
 		
@@ -30,8 +29,7 @@ public class CoinToss {
 			Scanner ops = new Scanner(System.in);
 			
 			System.out.println("Enter number of times to toss coin: ");
-			int value = ops.nextInt();
-			
+			int value = ops.nextInt();			
 				tossCoin(value);
 		}
 }

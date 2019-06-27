@@ -49,9 +49,6 @@ public class ParkingCharges {
 
 		System.out.println("Total charges = " + total);
 	}
-
-//	}
-
 	public static void main(String[] args) {
 		ParkingCharges.calcCharges();
 	}

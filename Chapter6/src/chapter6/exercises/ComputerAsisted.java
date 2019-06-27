@@ -37,10 +37,8 @@ public class ComputerAsisted {
 		//call method to change question
 		displayRemark();
 	}
-
 	public static void main(String[] args) {
 		// call method displayRemark
 		displayRemark();
 	}
-
 }

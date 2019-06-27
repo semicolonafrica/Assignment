@@ -2,6 +2,10 @@ package chapter6.exercises;
 
 import java.util.Scanner;
 
+/**
+ * @author LEMON
+ *
+ */
 public class SquareAsterisk {
 	
 	public static void squareOfAsterisks(int numb) {

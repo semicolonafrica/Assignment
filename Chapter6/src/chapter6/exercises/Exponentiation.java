@@ -2,6 +2,10 @@ package chapter6.exercises;
 
 import java.util.Scanner;
 
+/**
+ * @author LEMON
+ *
+ */
 public class Exponentiation {
 
 	public int integerPower() {
@@ -25,8 +29,6 @@ public class Exponentiation {
 		}
 		return value1;
 	}
-	
-
 	public static void main(String[] args) {
 		Exponentiation lem = new Exponentiation();
 

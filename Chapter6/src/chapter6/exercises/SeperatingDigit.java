@@ -1,6 +1,12 @@
 package chapter6.exercises;
+
 import java.util.Scanner;
+/**
+ * @author LEMON
+ *
+ */
 public class SeperatingDigit {
+	
 	public static String getDigit(int number) {
 		String store =" ";
 		//int number=1;
@@ -13,8 +19,6 @@ public class SeperatingDigit {
 			
 			number /= 10;
 		}
-		
-	
 		}
 		else{
 			System.out.println("invalid value enter the correct value");
@@ -28,5 +32,4 @@ public class SeperatingDigit {
 		int value=input.nextInt();
 		System.out.println(getDigit(value));
 	}
-
 }

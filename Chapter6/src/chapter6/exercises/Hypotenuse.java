@@ -19,13 +19,9 @@ public class Hypotenuse {
 		return result;
 		//end of method
 	}
-
-	
 	public static void main(String[] args) {
 		
 		System.out.println(getHypotenus(3.0, 4.0));
-		System.out.print(Hypotenuse.printHypotenus(3.0, 4.0));
-		
-		
+		System.out.print(Hypotenuse.printHypotenus(3.0, 4.0));	
 	}
 }

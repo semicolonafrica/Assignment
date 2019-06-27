@@ -24,7 +24,6 @@ public class PerfectNumber {
 		}
 		return status;
 	}
-
 	public static void displayPerfectNumbers(int number) {
 
 		int sum = 0;
@@ -61,5 +60,4 @@ public class PerfectNumber {
 			displayPerfectNumbers(i);
 
 	}
-
 }

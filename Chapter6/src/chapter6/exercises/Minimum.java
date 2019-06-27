@@ -2,18 +2,13 @@ package chapter6.exercises;
 
 import java.util.Scanner;
 
-public class Minimum {
-
-	
-	
+public class Minimum {	
 	public static float minimum3(float num1, float num2, float num3) {		 
 		
 		float smallest = Math.min(num1, Math.min(num2, num3));
 		
 		return smallest;
-	}
-	
-	
+	}	
 	public static void main(String[] args) {
 		
 		Scanner input = new Scanner(System.in);
