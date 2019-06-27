@@ -25,7 +25,6 @@ public class Exponentiation {
 		for(int i=1; i<=exponent; i++) {
 
 			value1 = value1 *value;
-
 		}
 		return value1;
 	}
