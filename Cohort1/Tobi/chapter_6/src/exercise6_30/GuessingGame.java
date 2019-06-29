@@ -9,17 +9,17 @@ public class GuessingGame {
 	
 	public static void guessingGame() {
 		Scanner in = new Scanner(System.in);
-		SecureRandom digit = new SecureRandom();
 		
 		int guess, play = 1, tries = 0;
-		int value = 1 + digit.nextInt(1000);
+		int  value;
 		Mode range = Mode.Default;
 		
 
 	while(play == 1) {
 		System.out.println("Guess a number between 1 - 1000");
+		value = generateNumbers();
+		
 		while(range != Mode.Yes) {
-			
 			guess = in.nextInt();
 			
 			if(guess > value) {
@@ -37,7 +37,8 @@ public class GuessingGame {
 			}
 			tries++;
 		}
-			if(tries < 10) {
+			if(tries <= 10) {
+				
 				System.out.println("Either you know the secret or you got lucky!\n");
 			}
 			else if(tries == 10) {
@@ -46,11 +47,18 @@ public class GuessingGame {
 			else if(tries > 10)
 				System.out.println("You should be able to do better\n");
 			
+			
+			tries = 0;
 			range = Mode.Default;
 			System.out.print("Enter 1 to play again or 0 to exit\n");
 			play = in.nextInt();		
 	}
 		System.out.print("GoodBye!!");
+	}
+	public static int generateNumbers() {
+		SecureRandom digit = new SecureRandom();
+		int value = 1 + digit.nextInt(1000);
+		return value;
 	}
 	
 }

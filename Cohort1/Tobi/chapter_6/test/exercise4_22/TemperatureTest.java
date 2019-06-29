@@ -11,20 +11,14 @@ public class TemperatureTest {
 
 		Scanner in = new Scanner(System.in);
 		
-		System.out.printf("Press 1 to convert Fahrenheit - Celcusis%nPress 2 to convert Celsius - Fahrenheit%n");
-		int select = in.nextInt();
+		System.out.printf("enter f to convert Fahrenheit - Celcusis%nenter  c to convert Celsius - Fahrenheit%n");
+		char select = in.next().charAt(0);
+		System.out.print("Enter temperature value: ");
+		double temp = in.nextDouble();
+		Temperature.calculateTemperature(select, temp);
 		
-		if(select == 1) {
-			System.out.println("Fahrenheit temperature is:");
-			double fah = in.nextDouble();
-			System.out.printf("Celsius equivalent is: %.2f~C",Temperature.celsius(fah));
-		}
-		else if (select == 2) {
-			System.out.println("Celsius temperature is:");
-			double cel = in.nextDouble();
-			System.out.printf("Fahrenheit equivalent is: %.2f~F",Temperature.fahrenheit(cel));
-		}
-		in.close();
+		
+		
 	}
 
 }

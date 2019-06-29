@@ -6,11 +6,11 @@ public class CoinTossingTest {
 		// TODO Auto-generated method stub
 		Scanner input = new Scanner(System.in);
 		
-		System.out.println("1- Toss Coin");
+		System.out.printf("Toss Coin%n%s%n","Enter number of coin flip");
 		int select = input.nextInt();
 		
-		if(select == 1)
-			CoinTossing.tossCoin();
+		
+			CoinTossing.tossCoin(select);
 		
 		
 	}

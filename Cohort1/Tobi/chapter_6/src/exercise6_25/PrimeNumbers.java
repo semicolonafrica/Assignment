@@ -4,30 +4,31 @@ public class PrimeNumbers {
 	
 	public static boolean findPrime(int number ) {
 		
-		int prime = 0, div = 0;
+		int prime = 0, div = 1;
 		boolean result = false;
 		 // divide number by 2
 			div = number  / 2;
+			
 
-			for(int f = 2; f <= div; f++) 
-			{
-				if(number ==2 || number == 3) {
+			for(int f = 2; f <= div; f++) {
+			
+//				if(number ==2 || number == 3) {
+//					
+//					div = number / 1;
+//					result = true;
+//				}
+//				 prime = number % f;
+				 if(number % f == 0) {
+					 return false;
 					
-					div = number / 1;
-					result = true;
-				}
-				 prime = number % f;
-				 if(prime == 0 ) {
-					 result = false;
-					 break;
 				 }
-			} // end of loop 
+			}// end of loop 
 			
-			if (prime != 0)
-//				System.out.print(n + "  ");
-				result = true;
+//			if (prime != 0)
+//				System.out.println(number + "");
+				return true;
 			
-			return result;
+			
 		}	
 					
 
@@ -59,13 +60,28 @@ public class PrimeNumbers {
 				System.out.print(t + " ");
 	}// end of loop 
 }
+	public static boolean primer(int num) {
+			if(num < 2)
+				return false;
+		for(int count = 2; count <= num/2; count++) {
+			if(num % count == 0)
+				return false;
+		}				
+			return true;
+	}
 		
 
 
 	public static void main(String[] args) {
-
-//			findPrime();
-			primeRoot();
+//		String store = " ";
+		for(int i = 1; i <= 1000; i++) 
+			
+			if(findPrime(i) == true) 
+				System.out.println(i);
+			
+		
+			
+//			primeRoot();
 		
 		
 

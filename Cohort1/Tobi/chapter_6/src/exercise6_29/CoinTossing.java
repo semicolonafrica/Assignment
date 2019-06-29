@@ -4,11 +4,11 @@ public class CoinTossing {
 
 	private enum Coins {HEADS, TAILS};
 	
-	public static void tossCoin() {
+	public static void tossCoin(int count) {
 	
 		Random generic = new Random();
 		int side, heads = 0, tails = 0;
-		for(int y = 1; y <= 20; y++) {
+		for(int y = 1; y <= count; y++) {
 			
 			side = generic.nextInt(2);
 			if(side == 0) {
@@ -18,7 +18,7 @@ public class CoinTossing {
 				heads++;
 		}
 		
-		System.out.printf("HEADS = %d, TAILS = %d%n%s", heads, tails, flip());
+		System.out.printf("HEADS = %d, TAILS = %d%n%nCoin lands on %s!", heads, tails, flip());
 		
 		
 	}
