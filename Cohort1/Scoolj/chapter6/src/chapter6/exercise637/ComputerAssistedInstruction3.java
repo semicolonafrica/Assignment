@@ -15,10 +15,12 @@ public class ComputerAssistedInstruction3 {
 	static SecureRandom randomNumber = new SecureRandom();
 	static Scanner input = new Scanner(System.in);
  
+	static double status = 0.0;
 		// this method generate random number
 	public static int calculateProduct() {
 	int randomDigit1 = 1 + randomNumber.nextInt(12);
 	int  randomDigit2= 1 + randomNumber.nextInt(12);
+	
 	System.out.println(" How much is   "+ randomDigit1 + "   times   "+ randomDigit2 );
 	
 		int  product = randomDigit1 * randomDigit2;
@@ -26,43 +28,52 @@ public class ComputerAssistedInstruction3 {
 		return product;
 	}
 	// this method makes decision based on input
-public static int findMultiplication() {
-		int pass =0;
-		int fail =0;
+
+	public static int findMultiplication() {
+		double pass =0;
+		double fail =0;
+		double counter= 0;
+		int response =0;
 		
 		// this iterate through d questions.
-		for (int i = 1;  i <=5; i++) {
+		for (counter= 1; counter <=10; counter++) {
+			
 			int findProduct = calculateProduct();
-			int response =0;
-			response = input.nextInt();
+				response = input.nextInt();
 			if (findProduct == response) {
-				int comment = commentPass(); 
-				pass ++;
+				commentPass(); 
+				 pass ++;
 				System.out.println(pass);
-				
-		}
+ 
+					}
 			else {
 		
-		// pass remark based on incorrect response
-		int comment = commentFail();	
+			// pass remark based on incorrect response
+			commentFail();	
 			fail++;
 			System.out.println(fail);
-		}
-		}
+	
+				}	
 		
-		pass = (pass/10)*100;
+		}
+		calculatePercent(pass, fail, counter);
 		
-		if (pass >= 75) {
-		System.out.printf("%d % %s",pass, "Congratulations, you are\r\n" + 
-				"ready to go to the next level!");
+			return response;
+		
+	}
+	
+	public static double calculatePercent(double pass, double fail, double counter) {
+		
+		 status = (pass/counter) * 100;
+ 
+		if (status >= 75) {
+			System.out.printf(" %.2f%s ",status,"%  Congratulations, you are ready to go to the next level!");
 		}
 		else {
-			
-			System.out.printf("%d % %s",pass, "Please ask your teacher for extra\r\n" + 
-					"help.");
+			System.out.printf(" %.2f%s ",status,"%   Please ask your teacher for extra help.");
 		}
-	
-		return pass;
+		
+		return status;
 	}
 
 // this method stores fail remarks
@@ -108,7 +119,6 @@ public static int commentFail() {
 		 break;
 	 }
 return commentPass;
-
 
 }
 
