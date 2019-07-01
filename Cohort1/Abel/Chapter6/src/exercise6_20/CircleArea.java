@@ -10,7 +10,7 @@ public class CircleArea {
 		value = input.nextInt();
 		
 		double area = Math.PI * (value * value);
-		System.out.printf("%.2f",area);
+		System.out.print(area);
 		
 		
 	}
