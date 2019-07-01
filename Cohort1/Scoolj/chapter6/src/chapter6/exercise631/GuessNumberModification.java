@@ -69,7 +69,7 @@ public class GuessNumberModification {
 			System.out.println("Aha! you know the secret!");
 		}
 		else if (counter < 10) {
-			System.out.println("Either yiu know the secret or you got lucky!");
+			System.out.println("Either you know the secret or you got lucky!");
 		}
 		else if (counter > 10) {
 			System.out.println("You should be able to do better!");

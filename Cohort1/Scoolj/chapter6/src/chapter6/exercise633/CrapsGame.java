@@ -11,17 +11,15 @@ import java.security.SecureRandom;
  */
 public class CrapsGame {
 	private static Scanner input = new Scanner(System.in);
-	static int point;
-	enum Status {WON, LOST, CONTINUE}
+	static int point=0;
+	static enum Status {WON, LOST, CONTINUE};
 	public static int findCrapGame() {
 		int crapGame = 0;
 	System.out.println(" Enter 1 play crap");
 	int start = input.nextInt();
 	if (start == 1) {
-		 point = randomValue();
-		 System.out.println(point);
-		 crapGame = calculateCrapsGameScore();
-
+		
+		crapGame = calculateCrapsGameScore();
 	}
 	else if (start == 0) {
 		System.exit(0);
@@ -30,10 +28,11 @@ public class CrapsGame {
 		return crapGame;
 	}
 	public static int calculateCrapsGameScore() {
-		int  point = randomValue();
+		int  pointM = randomValue();
 		int myPoint = 0;
 		Status gameStatus = null;
-		switch (point){
+		
+		switch (pointM){
 		case 7:
 		case 11:
 		gameStatus = Status.WON;
@@ -56,15 +55,13 @@ public class CrapsGame {
 		
 	 	while (gameStatus == Status.CONTINUE) {
 	 		point = randomValue();
-	 	int counter =0;
+	 		
 	 	if (myPoint ==7) {
 	 		gameStatus =Status.LOST;
 				}
 				else if (point== myPoint) {
 					gameStatus = Status.WON;
 				}
-				
-				counter++;
 			}
 		
 			return myPoint;
