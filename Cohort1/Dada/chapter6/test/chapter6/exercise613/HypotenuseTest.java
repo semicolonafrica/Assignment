@@ -1,6 +1,6 @@
 package chapter6.exercise613;
 
-import chapter6.exercise613.Hypotenuse;
+import chapter6.exercise615.Hypotenuse;
 
 public class HypotenuseTest {
 
