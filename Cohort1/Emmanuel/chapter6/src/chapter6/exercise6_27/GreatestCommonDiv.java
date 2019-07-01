@@ -19,14 +19,16 @@ public class GreatestCommonDiv {
 			remainder = num2 % num1;
 		}
 		while(remainder != 0) {
-			num1 = num2;
+			num1= num2;
 			num2 = remainder;
 			
 			remainder = num1 % num2;
 			
-			
+		
 		}
 		return num2;
 	}
+
+	
 
 }

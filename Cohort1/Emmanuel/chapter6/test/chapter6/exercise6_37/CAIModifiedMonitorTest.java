@@ -1,13 +1,13 @@
 /**
  * 
  */
-package chapter6.exercise6_35;
+package chapter6.exercise6_37;
 
 /**
  * @author Emmanuel Akinbode
  *
  */
-public class ComputerAssistedInstructionTest {
+public class CAIModifiedMonitorTest {
 
 	/**
 	 * @param args
@@ -15,7 +15,7 @@ public class ComputerAssistedInstructionTest {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		// ComputerAssistedInstruction.generateQuestions(x, y);
+		CAIModifiedMonitor.multiply();;
 
 	}
 

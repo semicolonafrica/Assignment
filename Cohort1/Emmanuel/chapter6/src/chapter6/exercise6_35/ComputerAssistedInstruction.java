@@ -7,22 +7,24 @@ import java.security.SecureRandom;
 import java.util.Scanner;
 
 /**
- * @author USER
+ * @author Emmanuel Akinbode
  *
  */
 public class ComputerAssistedInstruction {
-	static SecureRandom randomNumber = new SecureRandom(); 
-	static int store;
-	static int number;
+	public static SecureRandom randomNumber = new SecureRandom(); 
+	public static int store;
+	public static int number;
 	
-	public static void multiplication() {
+	static int x = 1+ randomNumber.nextInt(10);
+	static int y =1 + randomNumber.nextInt(10);
+	
+	public static void multiplication(int x, int y) {
 		int num1 = 0;
 		int num2 = 0;
 		int answer = 0;
 		Scanner input = new Scanner(System.in);
 		
-		int x = 1+ randomNumber.nextInt(9);
-		int y =1 + randomNumber.nextInt(9);
+	
 		
 		 store = x * y;
 		 
@@ -41,10 +43,41 @@ public class ComputerAssistedInstruction {
 			}
 			else if(answer == store) {
 				System.out.printf("\"Congratulatiom\"");
+				//generateQuestions(x,y);
 			}
 			
 		}
 		
+	}
+	
+	public static int generateQuestions(int x,int y) {
+		
+		multiplication(x, y);
+		
+		int raaa = 1 + randomNumber.nextInt(5);
+		
+		String quest = "";
+		int ans = 0;
+		
+		switch(raaa) {
+			case 1:
+				quest =  ("What is the multiplication of " + x +" and "+ y);
+				ans = x * y;
+			case 2:
+				quest = ("What is the multiplication of " + x +" and "+ y);
+				ans = x * y;
+			case 3:
+				quest =  ("What is the multiplication of " + x +" and "+ y);
+				ans = x * y;
+			case 4:
+				quest = ("What is the multiplication of " + x +" and "+ y);
+				ans = x * y;
+			case 5:
+				quest = ("What is the multiplication of " + x +" and "+ y);
+				ans = x * y;
+				
+		}
+		return ans;
 	}
 
 
