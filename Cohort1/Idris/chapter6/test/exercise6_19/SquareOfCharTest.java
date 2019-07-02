@@ -13,7 +13,7 @@ public class SquareOfCharTest {
 		char hash = input.next().charAt(0);
 		
 		SquareOfChar.displaySquareAst(side, hash);
-
+		input.close();
 	}
 
 }

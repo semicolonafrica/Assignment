@@ -9,7 +9,7 @@ public class ParkingCharges {
 		System.out.print("Enter the number of Customer: ");
 		double a = input.nextDouble();
 		double b = 0.0;
-		double extraTime = 0.0;
+		//double extraTime = 0.0;
 		double currentCharges = 0.0;
 		double totalCharges = 0.0;
 		double i;
@@ -36,7 +36,7 @@ public class ParkingCharges {
 
 				totalCharges += currentCharges;
 		  }
-		
+		input.close();
 	
 		return totalCharges;	
   }
