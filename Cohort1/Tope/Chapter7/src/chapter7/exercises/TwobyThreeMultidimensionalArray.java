@@ -60,6 +60,7 @@ public class TwobyThreeMultidimensionalArray {
 		Scanner input = new Scanner(System.in);
 		int values;
 		
+		System.out.println("Enter values to the Array");
 		for(int roww =0; roww< rows; roww++) {
 			
 			for(int colomnn =0; colomnn< colomn; colomnn++ ) {
@@ -67,7 +68,61 @@ public class TwobyThreeMultidimensionalArray {
 				t[roww][colomnn] = input.nextInt();
 			}
 		}
+		
+		//Question 11
+		//Write a series of statements that determines and displays the
+		//smallest value in t.
+		int smallestValue = t[0][0];
+		for(int i = 0; i< rows; i++) {
+			for(int x = 0; x< colomn; x++) {
+				
+				if(smallestValue > t[i][x])
+				smallestValue = t[i][x];
+			}
 			
+		}
+		System.out.println(smallestValue);
+		
+		//Question 12
+		//Write a single printf statement that displays the elements of
+		//the first row of t.
+		System.out.printf("%d %d %d%n", t[0][0], t[0][1], t[0][2] );
+		
+		//Question 13
+		//Write a statement that totals the elements of the third column of
+		//t. Do not use iteration
+		int total = t[0][2] + t[1][2];
+		System.out.println(total);
+		
+		//Question 14
+		//Write a series of statements that displays the contents of t in
+		//tabular format. List the column indices as headings across the
+		//top, and list the row indices at the left of each row.
+		
+		
+		int v =0; //Variable to hold subscript value of colomn
+		System.out.print("\n   c0  c1   c2");
+		for(int i = 0; i< rows; i++) {
+			
+			for(int x = 0; x< colomn; x++) {
+				
+				if(x % 3 == 0)
+					System.out.println();
+				
+				if(x ==0) {
+					System.out.printf("r%d  ", v);
+					v++;
+					}
+				
+				System.out.printf("%d   ",t[i][x]);
+				
+			}
+			
+		}
+			
+			
+			
+		
 			
 		
 			
