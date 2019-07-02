@@ -20,7 +20,7 @@ public class Craps {
 	{
 		String won;
 		String lose;
-		String continu;
+		String continue;
 		
 		if ( sum == 7 || sum == 11) {
 			System.out.print("YOU WIN");

@@ -9,18 +9,19 @@ public class Numbers {
 		SecureRandom randomNumbers = new SecureRandom();
 		
 		for(int counter = 1; counter <=5; counter ++) {
-		int even =2 + 2 * randomNumbers.nextInt(counter);
-		System.out.printf("%d, ", even);
+			int even =2 + 2 * randomNumbers.nextInt(counter);
+				System.out.printf("%d, ", even);
+		}
+		System.out.println();
+		
+		for(int counter = 1; counter <=5; counter++) {
+			int odd = 3 + 2 * randomNumbers.nextInt(counter); 
+				System.out.printf("%d, ", odd);
 		}
 		System.out.println();
 		for(int counter = 1; counter <=5; counter++) {
-		int odd = 3 + 2 * randomNumbers.nextInt(counter); 
-		System.out.printf("%d, ", odd);
-		}
-		System.out.println();
-		for(int counter = 1; counter <=5; counter++) {
-		int numbers = 6 + 4 * randomNumbers.nextInt(counter); 
-		System.out.printf("%d, ", numbers);
+			int numbers = 6 + 4 * randomNumbers.nextInt(counter); 
+				System.out.printf("%d, ", numbers);
 		}
 	}	
 }

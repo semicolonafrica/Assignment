@@ -11,51 +11,55 @@ public class Coin {
 //	simulates coin tossing, each side of the coin should appear approximately half the time.]
 	
 	
-//	private enum Status {WON, LOST};
+	private enum Status {HEADS, TAILS};
 //	
-//	private static final int HEAD =1;
-//	private static final int TAIL = 2;
+	private static final int HEADS =1;
+	private static final int TAILS = 2;
 	
 	public static void flipCoin(){
 		
 	Scanner input = new Scanner(System.in);	
-	System.out.println("1. Toss Coin");
-//	int one =1;
-	int one = input.nextInt();
-	System.out.println("Enter the number of times to flip coin");
+	System.out.println("Enter the number of times to toss coin");
 	int number = input.nextInt();
 	
-
+//	System.out.println("1. Toss Coin");
+//	int one = input.nextInt();
+	
 	Coin.tossCoin(number);
 	input.close();
+	
 	}
 		
 	public static void tossCoin(int number ) {
+		
 		SecureRandom randomNumbers = new SecureRandom();
 		
 		int head =0;
 		int tail =0;
 		
-		
 		for(int counter=1; counter<=number; counter++) {
-		int toss = 1+ randomNumbers.nextInt(2);
-		switch(toss) {
+			int toss = 1+ randomNumbers.nextInt(2);
 		
-		case 1:
-			head++;
-			break;        
-		case 2:
-			tail++;
-			break;
+			switch(toss) {
+		
+			case HEADS:
+				head++;
+				break;        
+			case TAILS:
+				tail++;
+				break;
+			}
 		}
 		
-	}
 		System.out.printf("Head: %d%nTail: %d%n", head++, tail++);	
 		if (head++ > tail++) {
-			System.out.printf("You win!");	
+			System.out.print("WON!");	
+		}
+		else if(head++ == tail++){
+			System.out.print("TIE!");
 		}
 		else {
-			System.out.printf("You lose!");	
+			System.out.print("LOST!");		
 		}
 }
 	
