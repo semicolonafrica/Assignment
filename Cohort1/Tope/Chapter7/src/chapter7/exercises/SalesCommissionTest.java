@@ -4,7 +4,7 @@ public class SalesCommissionTest {
 
 	public static void main(String[] args) {
 	
-		SalesCommission.holder();
+		SalesCommission.evaluator();
 		SalesCommission.outputStatics();
 
 	}

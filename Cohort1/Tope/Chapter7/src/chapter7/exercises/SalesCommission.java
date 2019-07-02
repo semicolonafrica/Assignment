@@ -15,27 +15,30 @@ public class SalesCommission {
 	
 	
 	//Method that calculates commission
-	public static  double commissionCalculator(double grossSales) {
+	public static  int commissionCalculator(int grossSales) {
 		
 		final int COMMISSION_PER_WEEK = 200;
 		double adsOn = 0.09 * grossSales;
 		
-		return COMMISSION_PER_WEEK + adsOn;
+		return (int) (COMMISSION_PER_WEEK + adsOn);
 	}
 	
 	
-	public static void holder() {
+	public static void evaluator() {
 		
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter number of workers");
+		
 		int length = input.nextInt();
 		 array = new int[length];
+		 
 		System.out.println("Enter their gross sales");
-		double grossSales =0;
-		double sales = 0;
+		int grossSales =0;
+		int sales = 0;
 		
 		for(int i = 0; i< length; i++) {
-		grossSales = input.nextDouble();
+			
+		grossSales = input.nextInt();
 		
 		sales = commissionCalculator(grossSales);
 		
