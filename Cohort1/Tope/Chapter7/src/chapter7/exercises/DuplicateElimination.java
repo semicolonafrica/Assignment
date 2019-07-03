@@ -1,6 +1,5 @@
 package chapter7.exercises;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 //Exercise 7.12
@@ -20,9 +19,7 @@ public class DuplicateElimination {
 			if(array[i] == number)
 				status = true;		
 		}
-		
 		return status;
-		
 	}
 	
 	
@@ -34,31 +31,25 @@ public class DuplicateElimination {
 		Scanner input = new Scanner(System.in);
 		int number = 0;
 		
-		System.out.println("Enter number");
+		System.out.println("Enter number between 10 and 100");
 		
 		for(int i =0; i<myArray.length; i++) {
 			
 			number = input.nextInt();
-			System.out.println(number);
 			
-			myArray[i] = number;
+			if(number < 10 || number > 100) {
+				System.out.println("Enter number that is in range");
+				break;
+			}
+				
 			
-			number = input.nextInt();
-			
-			if((searchArray(myArray, number) == false))
+			if(!(searchArray(myArray, number)))
 				System.out.println(number);
 			
-//			else
-//				System.out.println();
-				
-				
-			
-		
+			myArray[i] = number;
 		}
 				
 		input.close();
-		
-		
 	}
 
 	
