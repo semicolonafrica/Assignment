@@ -36,7 +36,7 @@ public class DuplicateElimination {
 			number = input.nextInt();
 			
 			if(number < 10 || number > 100) {
-				System.out.println("Enter number that is in range");
+				System.err.println("Enter number that is in range");
 				break;
 			}
 				
