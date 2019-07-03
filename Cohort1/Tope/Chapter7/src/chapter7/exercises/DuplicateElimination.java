@@ -8,8 +8,6 @@ import java.util.Scanner;
 
 public class DuplicateElimination {
 	
-	
-	
 	public static boolean searchArray(int[] array, int number) {
 		
 		boolean status = false;
@@ -43,17 +41,30 @@ public class DuplicateElimination {
 			}
 				
 			
-			if(!(searchArray(myArray, number)))
+			if(!(searchArray(myArray, number))) {
 				System.out.println(number);
-			
+					
 			myArray[i] = number;
+			}
+			
+			for(int x : myArray) {
+				
+				if(x !=0)
+				System.out.printf("%d ", x);
+			}
+	
 		}
 				
 		input.close();
+		
+		System.out.println();
+		
+		for(int displayArray : myArray) {
+			System.out.printf("%d ", displayArray);
+			}
+		
 	}
-
-	
-	
+		
 	public static void main(String[] args) {
 		
 		duplicateArray();
