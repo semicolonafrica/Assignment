@@ -1,0 +1,4 @@
+declare and initialise counter to 10
+declare and initialise score to 10
+in the displayRemark method, introduce a for-loop
+if answer equals response, increment score

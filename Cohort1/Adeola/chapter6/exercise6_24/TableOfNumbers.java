@@ -62,7 +62,8 @@ public class TableOfNumbers {
 		System.out.println("decimal    " + "binary     "+"octaldecimal     "+"hexadecimal");
 //		System.out.println(generateOctal(70));
 //		System.out.println(generateOctal(71));
-		tableOfNumbers(2000);
+//		tableOfNumbers(2000);
+		System.out.println(generateHex(67));
 	}
 
 }

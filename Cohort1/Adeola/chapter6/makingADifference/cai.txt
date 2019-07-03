@@ -1,0 +1,16 @@
+create a class ComputerAssistedInstruction
+import securerandom 
+import scanner object
+
+write a method multiply()
+
+declare two variables a and b using secureRandom;
+ declare result =a*b;
+return result
+
+write a method display remark
+
+ if result is not equal to answer, 
+display "no, please try again"
+if result equals answer, diplay "very good"
+
