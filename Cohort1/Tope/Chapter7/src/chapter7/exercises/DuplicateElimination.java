@@ -10,6 +10,7 @@ public class DuplicateElimination {
 	
 	public static boolean searchArray(int[] array, int number) {
 		
+		
 		boolean status = false;
 		
 		for(int i =0; i < array.length; i++) {
@@ -24,8 +25,8 @@ public class DuplicateElimination {
 	
 	
 	public static void duplicateArray() {
-		
-		int[] myArray = new int[5];
+		final int MY_ARRAY_LENGTH = 5;
+		int[] myArray = new int[MY_ARRAY_LENGTH];
 		Scanner input = new Scanner(System.in);
 		int number = 0;
 		
