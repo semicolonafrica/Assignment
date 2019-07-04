@@ -19,6 +19,7 @@ public class CircleArea{
 		Scanner circle = new Scanner(System.in);
 		System.out.println("Enter Radius");
 		int radius = circle.nextInt(); 
+		circle.close();
 		
 		System.out.println(circleArea(radius));
 	

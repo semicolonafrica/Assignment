@@ -22,7 +22,7 @@ public class FillCharacter{
 			
 			fillCharacter(x,fill);
 			
-			
+			input.close();
 		
 
 		
