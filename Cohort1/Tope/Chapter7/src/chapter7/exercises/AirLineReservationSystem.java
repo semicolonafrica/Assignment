@@ -11,7 +11,7 @@ public class AirLineReservationSystem {
 	 boolean[] seats = new boolean[10];
 	
 	
-	public static boolean checkifArrayisFilled(boolean[] array) {
+	public static boolean checkIfPlaneSeatsAreFilled(boolean[] array) {
 		
 		boolean status = false;
 		
@@ -24,28 +24,36 @@ public class AirLineReservationSystem {
 	} 
 	
 	
-	
-	
 	public void reservationSystem() {
+		
 		int number;
 		Scanner input = new Scanner(System.in);
 		int x =0;
-		int y = 4;
-		
+		int y = 5;
 		
 		System.out.println("Please type 1 for First Class and 2 for Economy");
 		
-		while((checkifArrayisFilled(seats))) {
+		while((checkIfPlaneSeatsAreFilled(seats))) {
 			
 			System.out.println("\nBook Flight!");
-		number = input.nextInt();
-		if(number == 1 ) { 
+			number = input.nextInt();
 			
-			seats[x] = true;
+			if(number >2 || number <1 )
+				System.out.println("Oops! book First class or Economy class");
 			
-			System.out.printf("Category: First Class%nSeat Number: %d%n", x);
+		
+		if(number == 1) { 
+			
+			if(x <5) {
+				
+				seats[x] = true;
+			System.out.printf("Category: First Class%nSeat Number: %d%n", x+1);
+			
+			}
+			
 			x++;
-			if(x ==6 ) {
+			
+			if(x >=6 ) {
 				
 				System.out.printf("Opps! our"
 						+ " First Class is filled "
@@ -57,21 +65,19 @@ public class AirLineReservationSystem {
 					System.out.printf("%nNext Flight leaves in 3hours%n");
 				break;
 				}
-			
-			if(dec.equalsIgnoreCase("Yes"))
-			number = input.nextInt();
 			}
 		}
 			
-		
-		if(number == 2) { 
+		try {
 			
+		if(number == 2) { 
 			seats[y] = true;
 			
-			System.out.printf("Category: Economy Class%nSeat Number: %d%n", y);
-			y++;
-		
-		if(y ==10 ) {
+			System.out.printf("Category: Economy Class%nSeat Number: %d%n", y+1);
+			y++;	}
+		}
+			
+		catch(ArrayIndexOutOfBoundsException e) {
 			
 			System.out.printf("Opps! our"
 					+ " Economy Class is filled "
@@ -86,17 +92,11 @@ public class AirLineReservationSystem {
 				
 			}
 			
-			if(decision.equalsIgnoreCase("Yes"))
-				number = input.nextInt();
-				
-		}
-			
-		
-		}
 		}
 		
+		}
 		input.close();
+	}
 		
 	}
 
-}
