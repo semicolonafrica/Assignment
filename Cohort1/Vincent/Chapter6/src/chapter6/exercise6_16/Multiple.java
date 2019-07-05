@@ -12,7 +12,7 @@ package chapter6.exercise6_16;
 
 public class Multiple {
 
-	public static int isMultiple(int firstNumber, int secondNumber) {
+	public static void isMultiple(int firstNumber, int secondNumber) {
 		int total = secondNumber % firstNumber;
 		
 		if (total > 0.0) {
@@ -20,9 +20,8 @@ public class Multiple {
 		}
 		
 		else 
-			System.out.println(" it is a multiple first number: true");
-		
-		return total;
+			System.out.println(" it is a multiple first number: true");		
+		return;
 			
 	}
 }

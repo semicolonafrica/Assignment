@@ -15,13 +15,13 @@ public class Random {
 		int e = randomNumbers.nextInt(1);
 		
 
-			System.out.println("The value of a is: "+a);
+			System.out.printf("The value of a is: %d\t%n ",a);
 		
 			System.out.println("The value of b is: "+b);
 		
 			System.out.println("The value of c is: "+c);
 		
-			System.out.println("The value of d is: "+d);
+			System.out.printf("The value of d is:%d\t\t%n ",d);
 			
 			System.out.println("The value of e is: "+e);
 		}

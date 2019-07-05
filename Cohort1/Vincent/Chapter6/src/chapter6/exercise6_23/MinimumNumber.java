@@ -8,9 +8,10 @@ public class MinimumNumber {
 	
 		public static void findMinimumNumber(double num1, double num2, double num3) {
 			
-		double total = Math.min(num1,(Math.min(num2, num3)));
+		double total = Math.max(num1,(Math.max(num2, num3)));
 	
-		System.out.printf("minimum number %f", total);
+		System.out.println("minimum number is : " + total);
+
 		}
 	
 }

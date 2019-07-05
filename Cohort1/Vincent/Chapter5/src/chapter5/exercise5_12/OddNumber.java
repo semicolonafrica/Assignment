@@ -7,13 +7,13 @@ public class OddNumber {
 	
 	public static void main(String[] args) {
 		
+		int  product = 0;
 		System.out.println("the odd numbers are:");
 		
 		for(int counter = 1; counter <= 15; counter += 2) {
 			
-			System.out.println(counter);
-			
-			
+		
+			System.out.println(counter);	
 		}
 	
 		 

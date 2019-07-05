@@ -7,26 +7,16 @@ package chapter5.exercise5_13;
 
 public class Factorial {
 
-		public static void main(String[] args) { 
-			int y = 20;
-			int n =20 ;
-			int counter = 1;
-			long total;
-			long result = 0;
-			int count = 1;
+		public static void calculateFactorial() {
+			long fact = 1;
 			
-		while(counter <= n) {
-			 total = counter * y ;
-			 result = result + total;
-			System.out.println(total);
-			++counter;
+			System.out.printf("%s%5s", "number" , "\t\tfactorialnumber");
+			System.out.println();
+			
+			for(int f = 1; f <= 20; f++) {
+				fact = f * fact;
+				
+				System.out.printf("%d!%25d%n", f , fact);
+			}
 		}
-			
-		System.out.print("factorial total is: ");
-		System.out.println(result);
-		
-
-
-
-		}		
 }
