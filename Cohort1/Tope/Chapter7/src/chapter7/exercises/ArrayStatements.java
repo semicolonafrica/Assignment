@@ -15,7 +15,7 @@ public class ArrayStatements {
 		//Question 1
 		System.out.println("Question 1");
 		int[] f = {0,1,2,3,4,5,6,7,8,9,10,23,43};
-		System.out.println(f[6]);
+		System.out.println(f[5]);
 		
 		System.out.println("Question 2");
 		//Question 2
