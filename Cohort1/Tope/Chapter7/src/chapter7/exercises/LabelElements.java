@@ -8,10 +8,6 @@ package chapter7.exercises;
 
 public class LabelElements {
 	
-	
-	
-	
-	
 	public static void labelElements() {
 		
 		
@@ -24,11 +20,11 @@ public class LabelElements {
 				 
 			 sales[row][col] = 0;
 			 
-			 System.out.printf("%d:%d  ", counter,sales[row][col] );
+			 System.out.printf("%3d: %d  ", counter,sales[row][col] );
 			 counter++;
 			 }
 			 
-			 System.out.println();
+			 System.out.println("\n");
 		
 	}
 		}
