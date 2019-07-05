@@ -21,11 +21,11 @@ public class NumberGuess {
 		
 		
 		 value = 1 + randomNumbers.nextInt(10);
-		 while(menu == 1) {
-			 System.out.print("Enter 1 to continue: ");
-			 guess = input.nextInt();
-			 break;
-	 }
+//		 while(menu == 1) {
+//			 System.out.print("Enter 1 to continue: ");
+//			 guess = input.nextInt();
+//			 break;
+//	 }
 		 while(guess != value ) {
 			 guess = input.nextInt();
 			 if(guess < value) {
@@ -42,7 +42,19 @@ public class NumberGuess {
 			 }
                  tries++;
 		 }
+		 
 		
+		 if(tries <= 10) {
+			 System.out.println("Either you know the secret or you got lucky");
+		 }
+		 if(tries == 10) {
+			 System.out.println("Aha! You know the secret!");
+		 }
+		 if(tries > 10) {
+			 System.out.println("You should be able to do better");
+		 }
+	
+		 
 	}
 }
 	
