@@ -8,8 +8,6 @@ import java.security.SecureRandom;
 
 public class GameOfCraps {
 
-	
-
     private static final SecureRandom randomNumbers = new SecureRandom();
    
    private enum Status{CONTINUE, WON, LOST};
@@ -22,7 +20,8 @@ public class GameOfCraps {
    private static final int BOX_CARS = 12;
    
     static int[] holdWin = new int[22];
-    static int[] holdLoss = new int[22]; 
+    static int[] holdLoss = new int[22];
+    static int rollDiceCounter =0;
    
 
    public static int rollDIce(){
@@ -44,7 +43,7 @@ public class GameOfCraps {
        for(int i = 1; i<= 1_000_000; i++) {
     	   
        int sumOfDice = rollDIce(); 
-
+       rollDiceCounter++;
        
 
        switch(sumOfDice){
@@ -66,7 +65,8 @@ public class GameOfCraps {
 
        while( gameStatus == Status.CONTINUE){
       
-           sumOfDice = rollDIce(); 
+           sumOfDice = rollDIce();
+           rollDiceCounter++;
         
            if(sumOfDice == myPoint)
            gameStatus = Status.WON;
@@ -76,6 +76,7 @@ public class GameOfCraps {
        }
        
        if(gameStatus == Status.WON) { 
+    	   
     	   if(i <=20)
     		   ++holdWin[i];
     	   
@@ -94,7 +95,7 @@ public class GameOfCraps {
        
    }
        
-       //Sum Array
+       //manipulate (sum) Array of win and Loss
        int u =0;
        int win= 0;
        int loss = 0;
@@ -115,9 +116,16 @@ public class GameOfCraps {
        
        for(int v = 1; v< holdWin.length; v++) {
     	   
-    	   System.out.printf("%3d%s\t%5d\t\t%d%n",
+    	   System.out.printf("%3d%s\t%5d\t\t%4d%n",
     			   (v <= 20? v :20),(v ==21?'+':""),holdWin[v], holdLoss[v]);
        }
+       
+       int chanceOfWinning = holdWin[21] / 10000;
+      // int chanceofLossing = holdLoss[21] / 10000;
+       
+       System.out.printf("%nChances of winning game of Craps = %d%s%n", chanceOfWinning, "%");
+       System.out.printf("Average Length of Game of Craps = %d%n", (rollDiceCounter/holdWin[21]));
+       System.out.printf("Do chances of Winning improve with the Length of the game?: %b", false);
    }
 
 
