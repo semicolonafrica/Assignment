@@ -1,0 +1,16 @@
+package calculator;
+
+public class CreditLimitCalculator {
+	private int accountNumber;
+	private int initialBalance;
+	private int totalItems;
+	private int totalCredits;
+	private int creditLimit;
+	private int newBalance;
+	
+	public CreditLimitCalculator(int accountNumber, int monthlyBalance, int totalItems, int totalCredits, int creditLimit) {
+		
+	}
+	
+	public int 
+}

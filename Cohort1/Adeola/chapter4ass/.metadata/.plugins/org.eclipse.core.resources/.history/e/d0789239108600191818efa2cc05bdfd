@@ -1,0 +1,15 @@
+package calculator;
+
+public class CreditLimitCalculator {
+	
+	
+	
+	
+	public CreditLimitCalculator(int accountNumber, int monthlyBalance, int totalItems, int totalCredits, int creditLimit) {
+		this.accountNumber = accountNumber;
+		this.initialBalance = initialBalance;
+		this.totalItems = totalItems
+	}
+	
+	public int 
+}
