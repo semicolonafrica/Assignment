@@ -46,7 +46,7 @@ public class PrimeNumber {
 	}
 	
 	public static void displayPrimeHalf() {
-		for(int i = 1; i< 1000;i++) {
+		for(int i = 2; i< 1000;i++) {
 			if(isPrimeHalf(i) == true) {
 				System.out.printf("%d ",i);
 			} 
@@ -57,7 +57,7 @@ public class PrimeNumber {
 	}
 	
 	public static void displayPrimeRoot() {
-		for(int i = 1; i< 1000;i++) {
+		for(int i = 2; i< 1000;i++) {
 			if(isPrimeRoot(i) == true) {
 				System.out.printf("%d ",i);
 			} 
