@@ -42,7 +42,7 @@ public class ParkingCharges {
 		//System.out.println("Hoursparked \tAmountCharged");					
 		
 		System.out.println("Your bill is:"+totalHours+"\n"+"$"+totalCharge);	
-	}
+		}
 		
 	}
 }	

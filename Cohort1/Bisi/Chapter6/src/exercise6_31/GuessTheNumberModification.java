@@ -9,17 +9,14 @@ public class GuessTheNumberModification {
 	public static void getNumber(int number) {
 		
 	Scanner in = new Scanner(System.in);
-		
-	int counter = 1;
+	SecureRandom randomNumbers = new SecureRandom();
+		int value = 1 + randomNumbers.nextInt(1000);
+	
+			int counter = 1;
 		while(counter <= 10) {	
 			System.out.println("Guess the number:");
 				 number = in.nextInt();
-	 				counter++;
-			
-		SecureRandom randomNumbers = new SecureRandom();
-		int value = 0;	
-		 value = 1 + randomNumbers.nextInt(1000);
-			System.out.println(value);
+	 				counter++;				
 		
 		if(number > value) {
 			 System.out.println("Too high, try again.");
@@ -30,16 +27,18 @@ public class GuessTheNumberModification {
 		 		 System.out.println("You should be able too better!");
 			 }
 		 else if(number == value) {
+			 System.out.println(value);
 			System.out.println("Congratulations, you guessed the number!");
 			System.out.println("Aha! You know the secret!");
+			 value = 1 + randomNumbers.nextInt(1000);
 			}
 		}			
 	}
 	
-	public static void main(String[] args) {
+public static void main(String[] args) {
 		
-	int value = 1;
+	int number = 0;
 		
-		getNumber(value);
+		getNumber(number);
 	}
 }

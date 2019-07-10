@@ -5,20 +5,16 @@ import java.security.SecureRandom;
 import java.util.Scanner;
 
 public class GuessTheNumber {
-
+		
 	public static void getNumber(int value) {
 		
-		Scanner in = new Scanner(System.in);
-				int counter = 1;
-		while(value != -1) {
-		System.out.println("Guess a value:");
-			value = in.nextInt();
-	
-	SecureRandom randomNumbers = new SecureRandom();		
-			int number = 0;
-	  number = 1 + randomNumbers.nextInt(1000);
-		System.out.println(number);	
+		SecureRandom randomNumbers = new SecureRandom();
+			int	number = 1 + randomNumbers.nextInt(1000);
 		
+		Scanner in = new Scanner(System.in);				
+			while(value != -1) {
+		System.out.println("Guess a value:");
+		value = in.nextInt();
 		 if(number < value) {
 			 System.out.println("Too high, try again.");
 			 }
@@ -28,16 +24,16 @@ public class GuessTheNumber {
 			 }
 		 else {
 			 if(number == value) {
-			System.out.println("Congratulations, you guessed the number!"); 
+				 System.out.println(number);
+				 System.out.println("Congratulations, you guessed the number!");
+				 number = 1 + randomNumbers.nextInt(1000);
 			 }	
-			 counter++;
-			 
+		 	}
 		 }
-		 }
-	 }
-}
+		}
+	}
 
-	public static void main(String[] args) {
+public static void main(String[] args) {
 		
 		int value = 0;	
 			

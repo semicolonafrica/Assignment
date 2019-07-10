@@ -24,12 +24,13 @@ public class DistanceBetweenPoints {
 		double C = A + B;
 		double distance = Math.sqrt(C);
 		
+		System.out.println(distance + "m");
 		return distance;
 		
 	}
 	public static void main(String[] args) {
 		
-		DistanceBetweenPoints.distance();
+		distance();
 	}
 
 }
