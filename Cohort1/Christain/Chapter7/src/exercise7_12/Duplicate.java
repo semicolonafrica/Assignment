@@ -3,9 +3,6 @@ import java.util.Scanner;
 public class Duplicate {
 	Scanner input = new Scanner(System.in);
 	
-	
-	
-	
 	public static boolean  searchDuplicate(int [] array, int x) {
 		boolean check = false;
 		
