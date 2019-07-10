@@ -7,6 +7,22 @@ public class AirlineReservationSystem {
 	public static Scanner input = new Scanner(System.in);
 	// One dimensional-array 
 	
+	public static boolean isBooked(boolean[] array) {
+		
+		boolean status = false;
+		
+		for(int i = 0; i < array.length; i++) {
+			
+			if(array[i] == false) {
+				status = true;
+			}
+			
+		}
+		return status;
+	}
+		
+	
+	
 	public static void isSeatingChart() {
 		
 		
@@ -21,19 +37,19 @@ public class AirlineReservationSystem {
 			for(int i = 1; i < value.length; i++) {
 				System.out.print("\nEnter the flight type\nType 1 for First Class\n Type 2 for Economy\n");
 				type = input.nextInt();
-				if(type == 1) {
+				if(type == 1 && isBooked(value)) {
 					if(i >= 1 && i < 6) {
 						
-						//value[i] = true;
+						value[i] = true;
 						System.out.printf("%n%s%d%n%s%n","Seat Number: ", i,"First Class");
 						//break;
 				
 					}
 				}
-					else if(type == 2){
+					else if(type == 2 && isBooked(value)){
 						if(i >= 6 && i <= 10) {
 						
-						//value[i] = true;
+						value[i] = true;
 						
 						System.out.printf("%n%s%d%n%s%n","Seat Number: ", i,"Economy");
 						//System.out.printf("", args);

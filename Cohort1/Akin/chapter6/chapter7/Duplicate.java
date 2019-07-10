@@ -28,16 +28,25 @@ public class Duplicate {
 		for(int i = 0; i < newArray.length; i++) {
 			
 			num = input.nextInt();
-			String store = "";
+			//String store = "";
 			if(!(searchArray(newArray,num))) {
+				System.out.printf("%d%n", num);
+					//store = store + " " + num;
+				newArray[i] = num;
 				
-					store = store + " " + num;
-						
 				
-				System.out.print(store);
+			} else {
+				i = i - 1;
 			}
-			
+			for(int value : newArray) {
+				
+				if(value != 0) {
+					System.out.printf("%d ", value);
+				}
+				
+			}
 		}
+		
 		input.close();
 	}
 	

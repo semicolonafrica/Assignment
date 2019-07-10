@@ -23,7 +23,7 @@ public class TotalSales {
 		}
 		System.out.println();
 		int totalRow = 0;
-		int totalColumn = 0;
+		//int totalColumn = 0;
 		for(int k = 0; k < sales.length;k++) {
 			System.out.printf("Prod %d", k + 1);
 			for(int d = 0; d < sales[k].length;d++) {
