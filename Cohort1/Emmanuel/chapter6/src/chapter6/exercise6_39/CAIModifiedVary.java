@@ -19,11 +19,11 @@ import java.util.Scanner;
 		public static void multiply() {
 			int count = 0;
 			int flag = 1;
-			int rann = 0;
+			int access = 0;
 			
-			System.out.println("Enter difficulty level.\n1. for easy\n2. Hard. ");
-			System.out.print("Enter choice question.\n1. for addition\n2. subtraction\n3. multiplication"
-					+ "\n4. division\n5. random mixture ");
+			System.out.println("Enter difficulty level.\n1. For Easy\n2. Hard. ");
+			System.out.println("Enter choice question.\n1. For Addition\n2. Subtraction\n3. Multiplication"
+					+ "\n4. Division\n5. Random mixture ");
 			int difficult = input.nextInt();
 			int vary = input.nextInt();
 			
@@ -48,29 +48,29 @@ import java.util.Scanner;
 //			rann = rand1 * rand2;
 			
 			if(vary==1) {
-				rann = getAddition(rand1, rand2);
+				access = getAddition(rand1, rand2);
 			}else if(vary == 2) {
-				rann = getSubtraction(rand1, rand2);
+				access = getSubtraction(rand1, rand2);
 			}else if(vary == 3) {
-				rann = getMultiplication(rand1, rand2);
+				access = getMultiplication(rand1, rand2);
 			}else if(vary == 4) {
-				rann = getDivision(rand1, rand2);
+				access = getDivision(rand1, rand2);
 			}else if(vary == 5) {
-				rann = getVarying(rand1, rand2);
+				access = getVarying(rand1, rand2);
 			}
 			
 			int user = input.nextInt();
 			
-			if(rann == user) {
+			if(access == user) {
 				
 				System.out.print(getCorrect(count));
 				count++;
 			} else {
 				
-				while(rann != user) {
+				while(access != user) {
 					System.out.print(getWrong());
 					user = input.nextInt();
-					if(rann == user) {
+					if(access == user) {
 						System.out.print(getCorrect(count));
 						System.out.println();
 						
@@ -84,21 +84,23 @@ import java.util.Scanner;
 			double percent  = (double)count / 10;
 			if(percent >= 0.75){
 				myStat = Student.CORRECT;
-				System.out.print("Congratulations, you are ready to go to the next level.");
+				System.out.println("Congratulations, you are ready to go to the next level.");
 			}
 			else if(percent < 0.75) {
 				myStat = Student.WRONG;
-				System.out.print("Please, ask your teacher for extra help.");
+				System.out.println("Please, ask your teacher for extra help.");
 			}
-			System.out.print("Enter 1 to continue: ");
+			System.out.println("Enter 1 to continue, and select question level and type: ");
 			flag = input.nextInt();
+			 difficult = input.nextInt();
+			 vary = input.nextInt();
 			}
 			}
 			
 
 		public static void genQuestion(int num1, int num2) {
 
-			System.out.print("How much is " + num1 + " multiply by " + num2 + " = ");
+			System.out.println("How much is " + num1 + " multiply by " + num2 + " = ");
 
 		}
 
@@ -108,19 +110,19 @@ import java.util.Scanner;
 			String correct = "";
 			switch(generateCorrect) {
 				case 1:
-					correct = "Very good";
+					correct = "Very good\n";
 					count++;
 					break;
 				case 2:
-					correct = "Excellent";
+					correct = "Excellent\n";
 					count++;
 					break;
 				case 3:
-					correct = "Keep up the good work";
+					correct = "Keep up the good work\n";
 					count++;
 					break;
 				case 4:
-					correct = "Nice work";
+					correct = "Nice work\n";
 					count++;
 			}
 			return correct;
@@ -132,16 +134,16 @@ import java.util.Scanner;
 			String wrong = "";
 			switch(generateWrong) {
 				case 1:
-					wrong = "No. Please try again";
+					wrong = "No. Please try again\n";
 					break;
 				case 2:
-					wrong = "Wrong, once more";
+					wrong = "Wrong, once more\n";
 					break;
 				case 3:
-					wrong = "Don't give up";
+					wrong = "Don't give up\n";
 					break;
 				case 4:
-					wrong = "No. keep trying.";
+					wrong = "No. keep trying.\n";
 			}
 			return wrong;
 		}
