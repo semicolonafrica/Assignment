@@ -40,7 +40,9 @@ public class TurtleGraphics {
 			prams.moveForward(spaces);
 			break;
 		case 6:
-			prams.displayArray();
+			System.out.println("Enter character: ");
+			char sign = input.next().charAt(0);
+			prams.displayArray(sign);
 			break;
 		case 7: 
 			prams.clearPad();
@@ -55,6 +57,7 @@ public class TurtleGraphics {
 		control = input.nextInt();
 		
 		}
+		input.close();
 	}
 	
 	public static void main(String[] args) {

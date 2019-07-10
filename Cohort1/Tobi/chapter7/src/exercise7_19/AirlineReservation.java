@@ -35,7 +35,9 @@ public class AirlineReservation {
 
 	public boolean assignFirstClass() {
 		boolean book;
+		
 		for(int seats = 0; seats < 5; seats++) {
+			
 			book = airlineSeats[seats]; 
 			if(book == false) {
 				System.out.printf("%s%n%s[%02d]%n%s%n%n","BOARDING PASS","Seat No is: ", seats + 1, "Section: First-class");
@@ -52,7 +54,7 @@ public class AirlineReservation {
 		for(int seats = 5; seats < 11; seats++ ) {
 			book = airlineSeats[seats];
 			if(book == false) {
-				System.out.printf("%s%n%s[%02d]%n%s%n%n","BOARDING PASS","Seat No is: ", seats , "Section: Economy-class");
+				System.out.printf("%s%n%s[%02d]%n%s%n%n","BOARDING PASS","Seat No is: ", seats + 1 , "Section: Economy-class");
 				airlineSeats[seats] = true;
 				return true;
 			}
@@ -82,7 +84,7 @@ public class AirlineReservation {
 				System.out.println("Thank You!\n");
 			}
 			else {//offer seat alternatives
-				System.out.println("Would you like a to be places in economy-class ?y/n");
+				System.out.println("First-class section is full\nWould you like a to be placed in economy-class ?[y/n]");
 				try {
 					 option = in.next().charAt(0);
 				}
@@ -108,7 +110,7 @@ public class AirlineReservation {
 				System.out.println("Thank You!\n");
 			}
 			else {
-				System.out.println("Would you like to be places in first class ?y/n");
+				System.out.println("Economy class is full\nWould you like to be placed in first class ?[y/n]");
 				try {
 				 option = in.next().charAt(0);
 				}

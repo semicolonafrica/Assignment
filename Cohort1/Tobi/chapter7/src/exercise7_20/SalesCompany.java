@@ -10,8 +10,9 @@ public class SalesCompany {
 	public void processSlip() {
 		Random gross = new Random();
 		//process slips for each saleperson daily sales 
-		double dailySale;
-		for(int daily = 0; daily <= 30; daily++) {
+		
+		double dailySale = 1;
+//		for(int daily = 0; daily <= 30; daily++) {
 			
 			for(int id = 0; id < sales.length; id++) {
 			
@@ -19,50 +20,66 @@ public class SalesCompany {
 					dailySale = gross.nextInt(1000);
 					sales[id][product] += dailySale;
 				}
+				dailySale = 10;
 			}
-		
-		}
-	}
-	public void displayTotals() {
-		double totalbyPerson = 0;
-		double totalbyProduct = 0;
-		processSlip();
-		System.out.println("SALES SUMMARY");
-		System.out.printf("%10s%15s%15s%15s%15s%15s%15s%n%n", "Salesperson", "product[1]","product[2]",
-				"product[3]","product[4]","product[5]","Total Sales");
-		
-		for(int id = 0; id < sales.length; id ++) {
-			System.out.printf("%11d" ,id + 1);
-			for(int product = 0; product < sales[id].length; product++) {
-				System.out.printf("%15.2f", sales[id][product]);
-				totalbyPerson += sales[id][product];
-			}
-			System.out.printf("%15.2f", totalbyPerson);
-			totalbyPerson = 0;
-			System.out.println("\n");
-		}
-		int prodIncrement = 0;
-		
-		System.out.printf("%s%n%11s","Product","Totals: ");
-		for(int count = 0; count < sales.length; count++) {
 			
-			totalbyProduct = sales[count][prodIncrement] + totalbyProduct;
-			if(count == 3 ) {
+		
+//		}
+	}
+	
+	public void slipByPerson() {
+		
+		processSlip();
+		double total = 0;
+		
+		System.out.print("Sales persons");
+		printNumber();
+		System.out.printf("%15s","Totals");
+		System.out.println("\n");
+		for(int product = 0; product < 5; product++) {
+			System.out.printf("Prod %d ", product + 1);
+		for(int salePersons = 0; salePersons < sales.length; salePersons++) {
+			
+			System.out.printf("%15.2f",sales[salePersons][product]);
+			total += sales[salePersons][product];
+		}
+		System.out.printf("%14.2f", total);
+		total = 0;
+			System.out.println('\n');
+			
+	}
+		
+		int sp = 0;
+		double totalbyProduct = 0;
+		
+		System.out.printf("%s%n%8s","Product","Totals: ");
+		for(int count = 0; count < sales[0].length; count++) {
+			
+			totalbyProduct = sales[sp][count] + totalbyProduct;
+			if(count == 4 ) {
+				
 				System.out.printf("%15.2f", totalbyProduct);
 				totalbyProduct = 0;
-				prodIncrement++;
+				sp++;
 				count = 0;
 			}
-			if(prodIncrement == 5) {
+			if(sp > 3) {
 				break;
 			}
 			
 		}
-//		System.out.println(sales[4][0]);
-	}
-	public static void main(String [] args) {
-		SalesCompany market = new SalesCompany();
+}
+	public void printNumber(){
 		
-		market.displayTotals();
+		for( int count = 0; count < sales.length; count++) {
+			if(count == 0)
+			System.out.printf("%7d", count + 1);
+			else
+				System.out.printf("%15d", count + 1);
+				
+				
+		}
+		
 	}
+	
 }

@@ -37,7 +37,7 @@ public class Turtle {
 				floor[allRows][allCol] = 0;
 			}
 		}
-		displayArray();
+//		displayArray();
 		
 	}
 	public void resetPosition() {
@@ -51,7 +51,7 @@ public class Turtle {
 		System.out.printf("Turtle position is: (%d, %d)", row,col);
 	}
 	
-	public void displayArray() {
+	public void displayArray(char sign) {
 		
 		for(int allRows = 0; allRows < floor.length; allRows++) {
 			
@@ -59,7 +59,7 @@ public class Turtle {
 				
 			
 				if(floor[allRows][allCol] == 1) {
-					System.out.print("*");
+					System.out.print(sign);
 				}
 				else
 					System.out.print(" ");
