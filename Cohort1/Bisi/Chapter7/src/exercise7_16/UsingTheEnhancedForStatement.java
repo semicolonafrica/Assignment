@@ -1,9 +1,13 @@
 package exercise7_16;
 
 public class UsingTheEnhancedForStatement {
-	double value;
-	public static void parseDouble() {
-	
-	
+		
+	public static void main(String[] args) {
+		double[] value = new double[args.length];
+		for(String num : ) {
+			value += Double.parseDouble(num);
+		}
+		System.out.println(value); 
 	}
+	
 }
