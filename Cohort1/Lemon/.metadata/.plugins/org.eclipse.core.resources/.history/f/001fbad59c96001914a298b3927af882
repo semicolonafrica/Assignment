@@ -1,0 +1,16 @@
+package chapter6.exercises;
+
+import java.util.Scanner;
+
+public class QualityPoint {
+
+	public static void checkResult() {
+		Scanner ops = new Scanner(System.in);
+
+		System.out.println("Enter Result");
+		int result = ops.nextInt();
+		
+		
+
+	}
+}

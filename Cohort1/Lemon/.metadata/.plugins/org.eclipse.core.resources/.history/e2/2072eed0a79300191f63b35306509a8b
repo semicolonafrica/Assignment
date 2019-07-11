@@ -1,0 +1,25 @@
+package chapter6.exercises;
+
+import java.util.Scanner;
+
+public class Exponentiation {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner ops = new Scanner(System.in);
+		
+		System.out.println("Enter baseValue: ");
+		int value = ops.nextInt();
+		
+		System.out.println("Enter Exponential Value: ");
+		int exponent = ops.nextInt();
+		
+		int value1 =1;
+		for(int i=1; i<=exponent; i++) {
+			
+			int value1 = value1 *value;
+		}
+	}
+
+}

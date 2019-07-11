@@ -1,0 +1,22 @@
+package chapter7.exercises;
+
+public class Statement {
+		public static void main(String[] args) {
+			// TODO Auto-generated method stub
+
+			int[] count = new int[10];
+			
+			int[] bonus = new int[15];
+			
+			for (int i= 0; i < bonus.length; i++) { 
+				bonus[i] += 1;
+			}
+			int[] bestScores = {5, 3, 78, 23, 7};
+			
+			System.out.println("Index\tValue");
+			
+			for (int y=0;y<bestScores.length; y++) {
+				System.out.println(y +"\t" + bestScores[y]);
+			}
+		}
+}

@@ -1,0 +1,43 @@
+package chapter6.exercises;
+
+public class CoinToss {
+	
+	public static void tossCoin() {
+
+			boolean head;
+
+				boolean value;
+				if (value == head) {
+					System.out.print("You Win");
+					
+				else{
+						
+					while (value != head) {
+							System.out.print("You win");
+							break;
+						}
+					}
+				}
+			}
+
+			public int rollDice() {
+				head =randomNumbers.nextInt(head);
+				tail =randomNumbers.nextInt(tail);
+
+				int sum = die1 + die2;
+				System.out.printf("Player rolled %d + %d = %d%n", die1, die2, sum);
+				return sum;
+
+			}
+
+			private int sum = rollDice();
+			
+			public static void main(String[] args) {
+				CrapGame lem = new CrapGame();
+				lem.getResult();
+			}
+		}
+
+	}
+
+}

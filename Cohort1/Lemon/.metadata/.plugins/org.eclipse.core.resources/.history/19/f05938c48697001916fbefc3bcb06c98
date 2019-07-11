@@ -1,0 +1,42 @@
+package chapter6.exercises;
+
+import java.security.SecureRandom;
+import java.util.Scanner;
+
+public class CoinToss {
+	
+	private enum Status{ HEAD, TAIL} 			
+			static int head = 0;
+			static int tail = 0;
+			int store =0;
+			
+				
+			
+			
+	
+	public static void tossCoin(int numb) {	
+		SecureRandom randomNumbers = new SecureRandom();
+		
+		int coinToss = randomNumbers.nextInt(2);
+		
+			for(int i=1; i<=numb; i++) {
+//				int m = coinToss;
+				
+				if (coinToss == 0) {
+					System.out.println("head");
+					head += 1;
+				}
+				else{
+					tail += 1;
+				}				
+			}
+			System.out.printf("%d %d", head,tail);
+	}
+
+			
+			
+		public static void main(String[] args) {
+//				CoinToss lem = new CoinToss();
+				tossCoin(20);
+		}
+}

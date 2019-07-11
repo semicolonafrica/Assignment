@@ -1,0 +1,23 @@
+package chapter6.exercises;
+
+public class CommonDivisor {
+	
+	public static void checkDivisor(int x, int y) {
+		
+		for(int i=1; i <x; i++) {
+			if(x%i ==0) {
+				System.out.print(i);
+			}
+		}System.out.println();
+		
+		for(int j =1; j<y; j++) {
+			if(y%j ==0) {
+				System.out.print(j);
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		checkDivisor(8,12);
+	}
+}

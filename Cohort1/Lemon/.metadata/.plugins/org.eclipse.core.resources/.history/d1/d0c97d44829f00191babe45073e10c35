@@ -1,0 +1,38 @@
+package chapter7.exercises;
+
+import java.security.SecureRandom;
+
+public class Dice {
+	
+	
+	public static int rollDice() {
+		SecureRandom rand = new SecureRandom();
+		int sum=0;
+		
+		int dice1 = 1 + rand.nextInt(6);
+		int dice2 = 1 + rand.nextInt(6);
+		
+		sum = dice1 + dice2;
+		
+		return sum;
+	}
+	
+	public static void displayFrequency() {
+		int[] array = new int [36_000_000];		
+		int frequency = 0;
+		
+		
+		
+		for(int i=0; i <= array.length; i++) {
+			
+			int rollDice2 = rollDice();
+			
+			System.out.println(rollDice2);
+			
+		}		
+		
+		
+	}
+	
+
+}

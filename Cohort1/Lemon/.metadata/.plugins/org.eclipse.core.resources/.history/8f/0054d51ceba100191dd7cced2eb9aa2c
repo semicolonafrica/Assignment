@@ -1,0 +1,53 @@
+package chapter7.exercises;
+
+import java.util.Scanner;
+
+public class SalesTable {	
+	
+	public void getSales() {
+		Scanner input = new Scanner(System.in);
+		
+		int salesPersonNumber = 0;
+		int productNumber = 0;
+		int totalDollar = 0;
+		
+		int [][] sales= {{250,100,76,9,2},{100,100,2,7,9},{50,15,12,6,150},{40,23,7,1,8,}};;
+
+//		
+//		System.out.println("Enter SalesPerson Number: ");
+//		salesPersonNumber = input.nextInt();
+//		
+//		System.out.println("Enter Product Number: ");
+//		productNumber = input.nextInt();
+//		
+//		System.out.println("Enter Total Sales: ");		
+//		totalDollar = input.nextInt();
+		
+	
+			
+			int sum=0;
+			
+			System.out.printf("%s%15s%15s%15s%15s%15s%15s%n","SalesPerson","Product1","Product2","Product3","Product4","Product5","Total");
+			for(int person=0;person<sales.length;person++) {				
+				
+				System.out.print(person+1);
+				
+				for(int product=0;product<sales[person].length;product++) {
+					totalDollar += sales[person][product];
+					
+					System.out.printf("%15d",sales[person][product]);
+					
+					sum+=sales[person][product];
+				}
+				
+				System.out.printf("%17d", totalDollar);		
+				
+				System.out.println();
+				
+				
+				totalDollar = 0;
+//				sum=0;
+			}
+			System.out.print(sum);
+		}
+}

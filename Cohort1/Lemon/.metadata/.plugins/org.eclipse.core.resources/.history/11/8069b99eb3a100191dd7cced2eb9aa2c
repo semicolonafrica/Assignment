@@ -1,0 +1,65 @@
+package chapter7.exercises;
+
+import java.util.Scanner;
+
+public class AirLine {	
+	
+	 boolean[] seats = new boolean[10];	
+	public static boolean checkIfPlaneSeatsAreFilled(boolean[] array) {
+		
+		boolean status = false;
+		
+		for(int y=0; y<array.length; y++) {
+			
+			if(array[y] == false)
+				status = true;
+		}
+		return status;
+	}	
+	
+	public void reservationSystem() {
+		
+		int number;
+		Scanner input = new Scanner(System.in);
+		int x =0;
+		int y = 5;
+		
+		System.out.println("Please type 1 for First Class and 2 for Economy");
+		
+		while((checkIfPlaneSeatsAreFilled(seats))) {
+			
+			System.out.println("\nBook Flight!");
+			number = input.nextInt();
+			
+			if(number >2 || number <1 )
+				System.out.println("Oops! book First class or Economy class");
+			
+		
+		if(number == 1) { 
+			
+			if(x <5) {
+				
+				seats[x] = true;
+			System.out.printf("Category: First Class%nSeat Number: %d%n", x+1);
+			
+			}
+			
+			x++;
+			
+			if(x >=6 ) {
+				
+				System.out.printf("Opps! our"
+						+ " First Class is filled "
+						+ "will you like to switch to our economy section?\n"
+						+ "Yes or No\n");
+			
+					String dec = input.next();
+				if(dec.equalsIgnoreCase("No")) {
+					System.out.printf("%nNext Flight leaves in 3hours%n");
+				break;
+				}
+			}
+		}
+		}
+	}
+}

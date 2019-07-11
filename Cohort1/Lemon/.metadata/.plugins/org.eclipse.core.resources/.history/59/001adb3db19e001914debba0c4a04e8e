@@ -1,0 +1,17 @@
+package chapter7.exercises;
+
+public class NoOfArgument {
+
+	
+	public static int product(int[] numbers) {
+		int total = 1;
+
+		for(int num : numbers) {
+			
+			total *= num;
+			
+		}
+		return total;
+		
+	}
+}

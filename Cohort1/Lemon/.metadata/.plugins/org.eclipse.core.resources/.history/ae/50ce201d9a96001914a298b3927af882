@@ -1,0 +1,14 @@
+package chapter6.exercises;
+
+import java.util.Scanner;
+
+public class QualityPoint {
+	
+	Scanner ops = new Scanner(System.in);
+	
+	System.out.println("Enter Result");
+	
+	int
+	
+
+}

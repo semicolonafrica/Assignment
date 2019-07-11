@@ -1,0 +1,47 @@
+package chapter6.exercises;
+
+import java.util.Scanner;
+
+public class PrimeNumbers {
+
+	public static boolean isPrime(int number) {
+		int primeCheck = 0;
+		boolean checkPrime = false;
+
+		for (int i = 1; i <= number; i++) {
+
+			if (number % i == 0) {
+				primeCheck++;
+			}
+		}
+
+		if (primeCheck >2 ) {
+			checkPrime = false;
+		}
+		else {
+			checkPrime = true;
+		}
+
+		return checkPrime;
+	}
+
+	public static int displayPrimeNumbers() {
+		Scanner ops = new Scanner(System.in);
+
+		int result = 0;
+		
+		System.out.println("Enter Number to check");
+		int numb = ops.nextInt();
+
+		for (int i = 2; i <= numb; i++) {
+			if (isPrime(i) == true)
+				result = i;
+		}
+		return result;
+	}
+
+	public static void main(String[] args) {
+		System.out.println(displayPrimeNumbers() + "is a Prime number.");
+	}
+
+}

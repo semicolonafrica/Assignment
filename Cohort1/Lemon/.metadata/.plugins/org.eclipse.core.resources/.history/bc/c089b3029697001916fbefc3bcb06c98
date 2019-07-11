@@ -1,0 +1,46 @@
+package chapter6.exercises;
+
+import java.security.SecureRandom;
+import java.util.Scanner;
+
+public class GuessNumber {
+
+	public static int getNumber() {
+		SecureRandom rand = new SecureRandom();
+
+		int number = 1 + rand.nextInt(1000);
+
+		return number;
+	}
+
+	public static void guess(int numb) {
+		Scanner input = new Scanner(System.in);
+
+		do { 
+		System.out.println("Guess a number between 1 and 1000");
+		 numb = input.nextInt();
+		 
+		 int value = getNumber();
+		
+			if (numb == value) {
+				System.out.println("Congratulations. You guessed the number!");
+
+			} 
+			else if (numb != value && numb > value) {
+				System.out.println("Too high. try again!");
+
+			} 
+			else if (numb != value && numb < value) {
+				System.out.println("Too low. try again!");
+
+			}
+		}
+		
+		while(numb != 0);}
+
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		guess(0);
+	}
+}

@@ -1,0 +1,77 @@
+package chapter6.exercises;
+
+import java.util.Scanner;
+public class Commission {	
+		
+		public void calculateCommission() {
+			
+			int wages = 0;
+			double earnings = 0;
+			double total = 0;
+			double commission = 0;
+			String salesPerson;
+		
+			
+			Scanner input = new Scanner(System.in);
+			
+			System.out.println("Enter number of worker: ");
+			int number = input.nextInt() ;
+			
+			int [] frequency = new int [number];
+			
+			for(int i = 0; i < number; i++) { 
+				
+				
+			System.out.println("Enter Salesperson Name: ");
+			
+				salesPerson = input.nextLine() ;
+			
+			System.out.println("Enter wages: ");
+				wages = input.nextInt();
+			
+			System.out.println("Enter Number of itemsSold: ");
+				int itemsSold = input.nextInt();
+				int counter = 0;
+				while (counter < itemsSold) {
+			
+					System.out.println("Enter item value: ");
+					int itemValue = input.nextInt();
+					if (itemValue == -1) {
+						break;
+					}
+					
+				total += itemValue;
+				++counter;
+				
+				}
+				
+				commission = total * 0.09;
+				System.out.println (salesPerson + " " + "Commission for itemsSold is: " + commission);
+				
+				earnings = wages + commission;
+				
+				System.out.println( earnings);
+				
+				frequency[i] = (int)earnings;
+			}
+			for (int c = 0; c<frequency.length; c++) {
+				   if (c == number) {
+					   System.out.printf("%5d: ", 1000);
+				   }
+				   
+				   else {
+					   System.out.printf("%03d-%03d: ", c *100, c *100 + 99);
+				   }
+				   
+				   for(int k=0; k<c; k++) {
+					   System.out.print("*");
+				   }
+				}			
+		}
+
+		public static void main(String [] args){
+			Commission obj = new Commission();
+
+			obj.calculateCommission();
+		}	
+}

@@ -1,0 +1,27 @@
+package chapter7.exercises;
+
+
+public class VariableNoOfArgument {
+
+		
+		
+		
+		
+		
+		
+		
+		public static int product(int... numbers) {
+			int total = 1;
+			for(int num : numbers) {
+				
+				total *= num;
+				
+			}
+			return total;
+			
+		}
+		
+	public static void main(String[] args) {
+		System.out.println(product());
+	}
+}

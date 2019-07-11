@@ -1,0 +1,39 @@
+package chapter6.exercises;
+
+import java.util.Scanner;
+
+public class CoinToss {
+	
+	private enum Status{ HEAD, TAIL} 
+	
+	public static int tossCoin() {
+		Scanner input = new Scanner(System.in);			
+			
+			boolean head = false;
+			boolean value;
+			int store =0;
+			int store1 =0;
+				
+			
+			System.out.println("Head or Tail");
+			value =input.hasNextBoolean();
+			
+			
+				if (value == head) {					
+					store = store + 1;
+					
+				if(value != head) {
+					store1 += 1;
+
+						}
+					}
+				return store;
+	}
+
+			
+			
+		public static void main(String[] args) {
+				CoinToss lem = new CoinToss();
+				System.out.println(lem.tossCoin());
+		}
+}

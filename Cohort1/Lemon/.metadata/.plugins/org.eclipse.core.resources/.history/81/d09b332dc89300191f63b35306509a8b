@@ -1,0 +1,42 @@
+/**
+ * 
+ */
+package chapter6.exercises;
+
+import java.util.Scanner;
+/**
+ * @author LEMON
+ *
+ */
+public class EvenNumber {
+	
+	public static boolean isEven() {
+		
+		int numb;
+		int i=1;
+		boolean result = false;
+		Scanner ops = new Scanner(System.in);
+		
+		for(; i>0; i++) {
+			
+		System.out.println("Enter Integer");
+		numb = ops.nextInt();
+				
+			if(numb == -1) {
+				break;
+			}
+			else if (numb % 2 == 0) {
+			 result = true;
+			}
+			else {
+				result = false;
+			}
+			
+		}
+		return result;
+	}
+
+	public static void oddNumber() {
+		isEven();
+	}
+}

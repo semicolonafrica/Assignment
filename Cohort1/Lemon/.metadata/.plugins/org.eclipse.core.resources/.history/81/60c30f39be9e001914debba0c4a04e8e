@@ -1,0 +1,47 @@
+package chapter7.exercises;
+
+import java.security.SecureRandom;
+import java.util.Scanner;
+
+public class VariableNoOfArgument {	
+	
+	static final int NUMB = 81;
+		
+		public static int product(int... numbers) {
+			int total = 1;
+			for(int num : numbers) {
+				
+				total *= num;
+				
+			}
+			return total;
+			
+		}
+		
+		public static void getPhoneNumber() {
+			SecureRandom rand = new SecureRandom();
+			
+			Scanner input = new Scanner(System.in);
+			
+			int[] number= new int[8];
+			int digit =0;
+			
+			System.out.println("Enter amount of Number to be generated: ");
+			int value = input.nextInt();
+			
+			for(int m = 0; m<=value; m++) {
+				
+			System.out.printf("%d%s",0, NUMB);
+			
+			for(int i=0; i<number.length; i++) {
+				digit =1 + rand.nextInt(9);				
+				System.out.printf("%d",digit);
+			}
+			System.out.println();
+			}
+		}
+		
+	public static void main(String[] args) {
+		getPhoneNumber();
+	}
+}

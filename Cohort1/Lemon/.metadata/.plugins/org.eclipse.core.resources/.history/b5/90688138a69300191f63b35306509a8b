@@ -1,0 +1,9 @@
+package chapter6.exercises;
+
+import java.util.Scanner;
+
+public interface Exponential {
+
+	
+	
+}

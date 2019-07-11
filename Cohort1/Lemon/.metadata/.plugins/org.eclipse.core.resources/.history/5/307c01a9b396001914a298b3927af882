@@ -1,0 +1,42 @@
+package chapter6.exercises;
+
+import java.util.Scanner;
+
+public class CoinToss {
+	
+	public static void tossCoin() {
+		Scanner input = new Scanner(System.in);
+		
+			boolean head;
+			boolean value;
+			int store =0;
+			int store1 =0;
+				
+			
+			System.out.println("Heas or Tail");
+			value =
+				if (value == head) {					
+					store = store + 1;
+					
+				if(value != head) {
+					store1 += 1;
+
+						}
+					}
+				
+			
+
+
+			}
+
+			private int value =();
+			
+			public static void main(String[] args) {
+				CoinToss lem = new CoinToss();
+				lem.tossCoin();
+			}
+		}
+
+	}
+
+}

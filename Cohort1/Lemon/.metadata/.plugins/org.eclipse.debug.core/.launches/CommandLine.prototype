@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication" visibleAttributes="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES, org.eclipse.jdt.launching.PROJECT_ATTR, org.eclipse.jdt.launching.PROGRAM_ARGUMENTS, org.eclipse.jdt.launching.MAIN_TYPE, org.eclipse.debug.core.MAPPED_RESOURCE_PATHS, org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR, org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD">
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+        <listEntry value="/Chapter7/src/chapter7/exercises/CommandLine.java"/>
+    </listAttribute>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+        <listEntry value="1"/>
+    </listAttribute>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="chapter7.exercises.CommandLine"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="20"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Chapter7"/>
+</launchConfiguration>
