@@ -12,7 +12,6 @@ public class SalesCompany {
 		//process slips for each saleperson daily sales 
 		
 		double dailySale = 1;
-//		for(int daily = 0; daily <= 30; daily++) {
 			
 			for(int id = 0; id < sales.length; id++) {
 			
@@ -24,7 +23,7 @@ public class SalesCompany {
 			}
 			
 		
-//		}
+
 	}
 	
 	public void slipByPerson() {

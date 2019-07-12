@@ -6,9 +6,10 @@ public class ChessPlayerTest {
 		// TODO Auto-generated method stub
 
 		ChessPlayer tobi = new ChessPlayer();
-		
+		KnightTour tobs = new KnightTour();
 //		tobi.moveKnight();
-		tobi.displayChessBoard();
+//		tobi.displayChessBoard();
+		tobs.tourKnight();
 	}
 
 }
