@@ -1,5 +1,6 @@
 package chapter7.exercises;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 //Program written by Oyemade Temitope 
@@ -26,7 +27,7 @@ public class AirLineReservationSystem {
 	
 	public void reservationSystem() {
 		
-		int number;
+		int number =0;
 		Scanner input = new Scanner(System.in);
 		int x =0;
 		int y = 5;
@@ -36,7 +37,11 @@ public class AirLineReservationSystem {
 		while((checkIfPlaneSeatsAreFilled(seats))) {
 			
 			System.out.println("\nBook Flight!");
+			try {
 			number = input.nextInt();
+			
+			
+			
 			
 			if(number >2 || number <1 )
 				System.out.println("Oops! book First class or Economy class");
@@ -60,13 +65,14 @@ public class AirLineReservationSystem {
 						+ "will you like to switch to our economy section?\n"
 						+ "Yes or No\n");
 			
-					String dec = input.next();
-				if(dec.equalsIgnoreCase("No")) {
+					String decision = input.next();
+				if(decision.equalsIgnoreCase("No")) {
 					System.out.printf("%nNext Flight leaves in 3hours%n");
 				break;
 				}
 			}
 		}
+		
 			
 		try {
 			
@@ -74,10 +80,11 @@ public class AirLineReservationSystem {
 			seats[y] = true;
 			
 			System.out.printf("Category: Economy Class%nSeat Number: %d%n", y+1);
-			y++;	}
+			y++;	
+			}
 		}
 			
-		catch(ArrayIndexOutOfBoundsException e) {
+		catch(ArrayIndexOutOfBoundsException  e) {
 			
 			System.out.printf("Opps! our"
 					+ " Economy Class is filled "
@@ -94,6 +101,13 @@ public class AirLineReservationSystem {
 			
 		}
 		
+			}
+			catch(InputMismatchException e) {
+				System.out.println("Oops you inputed an invalid number\nTry again");
+				
+				input.nextLine();
+			}
+			
 		}
 		input.close();
 	}
