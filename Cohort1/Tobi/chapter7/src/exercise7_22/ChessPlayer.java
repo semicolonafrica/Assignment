@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class ChessPlayer {
 	ChessBoard k = new ChessBoard();
+	
 	public void moveKnight() {
 		
 		Scanner input = new Scanner(System.in);
@@ -22,8 +23,6 @@ public class ChessPlayer {
 		k.displayVisitiedSquares();
 		input.close();
 	}
-	public void displayChessBoard() {
-		k.displayVisitiedSquares(); 
-	}
+	
 	
 }

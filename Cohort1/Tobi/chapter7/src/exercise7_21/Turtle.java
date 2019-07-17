@@ -19,15 +19,17 @@ public class Turtle {
 //		
 //		
 //	}
+	//set pen up
 	public void penUP() {
 		 Status = Pen.UP;
 		 System.out.println("PEN UP");
 	}
-	
+	//set pen down
 	public void penDOWN() {
 		Status = Pen.DOWN;
 		System.out.println("PEN DOWN");
 	}
+	//reassign all elements value to zero
 	public void clearPad() {
 		
 		for(int allRows = 0; allRows < floor.length; allRows++) {
@@ -40,17 +42,18 @@ public class Turtle {
 //		displayArray();
 		
 	}
+	//set row and column to 0
 	public void resetPosition() {
 		row = 0;
 		col = 0;
 		
 	}
 		
-	
+	//display current row and column of turtle on array
 	public void displayTurtle() {
 		System.out.printf("Turtle position is: (%d, %d)", row,col);
 	}
-	
+	//display a shape where element is set to 1
 	public void displayArray(char sign) {
 		
 		for(int allRows = 0; allRows < floor.length; allRows++) {
@@ -69,7 +72,7 @@ public class Turtle {
 		}
 	}
 	
-	
+	//change directions value 
 	public void turnRight() {
 		
 		
@@ -80,6 +83,7 @@ public class Turtle {
 		turtleFace();
 		
 	}
+	
 	public void turnLeft() {
 		
 		
@@ -90,6 +94,7 @@ public class Turtle {
 			direction--;
 		turtleFace();
 	}
+	//display current position value 
 	public void turtleFace() {
 		if(direction == 1) {
 			System.out.println("Turtle is facing North");
@@ -103,7 +108,7 @@ public class Turtle {
 
 	}
 	
-	
+	//move forward in set direction
 	public void moveForward(int no_of_spaces) {
 		
 		switch(direction) {

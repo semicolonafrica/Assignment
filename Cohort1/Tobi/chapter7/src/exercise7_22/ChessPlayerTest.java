@@ -7,9 +7,9 @@ public class ChessPlayerTest {
 
 		ChessPlayer tobi = new ChessPlayer();
 		KnightTour tobs = new KnightTour();
-//		tobi.moveKnight();
+		tobi.moveKnight();
 //		tobi.displayChessBoard();
-		tobs.tourKnight();
+//		tobs.tourKnight();
 	}
 
 }

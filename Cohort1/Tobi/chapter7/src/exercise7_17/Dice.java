@@ -8,12 +8,14 @@ public class Dice {
 	
 	static Random gamer = new Random();
 	static int[] possibility = new int [13];
+	//tally result
 	public static void tally() {
 		
 		for(int count = 1; count <= 36_000_000; count++) {
 			++possibility[rollDice()];
 		}
 	}
+	//Roll dice and return sum;
 	public static int rollDice() {
 		int diceSum;
 		die1 = 1 + gamer.nextInt(6);
@@ -22,6 +24,7 @@ public class Dice {
 		diceSum = die1 + die2;
 		return diceSum;
 	}
+	//display result
 	public static void displayResult() {
 		
 		tally();
