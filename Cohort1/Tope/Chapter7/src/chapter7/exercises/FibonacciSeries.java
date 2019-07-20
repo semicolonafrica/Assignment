@@ -7,13 +7,14 @@ package chapter7.exercises;
 
 public class FibonacciSeries {
 	
-	public static int fibonacci(int n) {
+	public static double fibonacci(double n) {
 		
-		int fibo =0;
+		double fibo =0;
 		
 		if(n != 0) {
 			
-			int prev = 0, current = 1;
+			double prev = 0;
+			double current = 1;
 		
 			fibo = prev + current;
 		
@@ -33,16 +34,5 @@ public class FibonacciSeries {
 	}
 	
 	
-
-	public static void main(String[] args) {
-		
-		for(int i = 0; i<= 100; i++) {
-			
-		 System.out.println(fibonacci(i));
-		 
-		 
-		}
-	
-	}
 
 }
