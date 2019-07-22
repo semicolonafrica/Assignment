@@ -1,14 +1,16 @@
 package exercise6_29;
 import java.util.Scanner;
 
-public class TossingCoinTest {
-	
+public class TossingCoinTest {	
 	public static Scanner input = new Scanner (System.in);
+	
 	private static TossingCoin coin = new TossingCoin();
+	
 	public static void main(String[] args) {
 		
 		boolean quit = false;
         int choice = 0;
+        
         printInstruction();
 		while (!quit) {
             System.out.println("Enter your choice: ");

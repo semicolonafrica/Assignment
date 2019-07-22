@@ -3,9 +3,9 @@ package exercise6_29;
 import java.security.SecureRandom;
 import java.util.Scanner;
 
-public class TossingCoin {
-	
+public class TossingCoin {	
 	private static Scanner input = new Scanner(System.in);
+	
 	private static SecureRandom randomNumber = new SecureRandom();
 	
 	private enum Side{HEAD, TAIL};
@@ -17,7 +17,7 @@ public class TossingCoin {
 
 		System.out.println("Enter number of times to toss coin: ");
 		int tossCoin = input.nextInt();
-		while (tossCoin > 0) {
+			while (tossCoin > 0) {
 					
 			switch (flipCoin()) {
 			case HEAD:
@@ -31,11 +31,8 @@ public class TossingCoin {
 				System.out.println("You tail = " + tail);
 				break;
 			}
-
 				tossCoin--;
-		}
-		
-		
+		}		
 	}
 	public static Side flipCoin() {
 		coin = 1 + randomNumber.nextInt(2);
