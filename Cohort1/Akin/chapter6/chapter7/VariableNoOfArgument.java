@@ -1,13 +1,6 @@
 package chapter7;
 
 public class VariableNoOfArgument {
-
-	
-	
-	
-	
-	
-	
 	
 	public static int product(int... numbers) {
 		int total = 1;

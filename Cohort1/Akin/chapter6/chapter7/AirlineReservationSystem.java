@@ -46,7 +46,7 @@ public class AirlineReservationSystem {
 				
 					}
 				}
-					else if(type == 2 && isBooked(value)){
+					if(type == 2 && isBooked(value)){
 						if(i >= 6 && i <= 10) {
 						
 						value[i] = true;

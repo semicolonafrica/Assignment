@@ -23,8 +23,9 @@ public class TotalSales {
 		}
 		System.out.println();
 		int totalRow = 0;
-		//int totalColumn = 0;
+																																																																																																								
 		for(int k = 0; k < sales.length;k++) {
+			totalRow = 0;
 			System.out.printf("Prod %d", k + 1);
 			for(int d = 0; d < sales[k].length;d++) {
 				totalRow += sales[k][d];
@@ -36,8 +37,9 @@ public class TotalSales {
 		}
 		System.out.println();
 		int total1 = 0;
-		for(int t = 0; t < sales[0].length; t++) {
+		for(int t = 0; t < sales[t].length; t++) {
 			for(int g = 0; g < sales.length; g++) {
+				total1 = 0;
 			total1 += sales[g][t]; 
 		}
 		System.out.printf("%15s%d","$", total1);

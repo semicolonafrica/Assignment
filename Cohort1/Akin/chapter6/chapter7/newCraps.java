@@ -20,8 +20,11 @@ import java.security.SecureRandom;
 				int sumOfDice = 0;
 				int frequencyWin = 0;
 				int frequencyLoss = 0;
+				int[] holdWin = new int[22];
+				int[] holdLoss = new int[22];
+				
 				System.out.printf("%5s%5s%n","WON","LOSS");
-				for(int r = 1; r <= 10;r++) {
+				for(int r = 1; r <= 1_000_000;r++) {
 					
 					sumOfDice = rollDice() ;
 					switch(sumOfDice) {
@@ -29,14 +32,14 @@ import java.security.SecureRandom;
 					case YO_LEVEN:
 						result = "WON";
 					//	System.out.print(result);
-						frequencyWin++;
+						//frequencyWin++;
 						break;
 					case SNAKE_EYES:
 					case TREY:
 					case BOX_CARS:
 						result = "LOST";
 						//System.out.print(result);
-						frequencyLoss++;
+						//frequencyLoss++;
 						break;
 					default:
 						result = "CONTINUE";
@@ -51,16 +54,31 @@ import java.security.SecureRandom;
 					if(sumOfDice == myPoint) {
 						result = "WON";
 						//System.out.print(result);
-						frequencyWin++;
+						//frequencyWin++;
 					} else if(sumOfDice == SEVEN) {
 						result = "LOST";
 						//System.out.print(result);
-						frequencyLoss++;
+						//frequencyLoss++;
 					}
+
 					
 				}
 				
-				System.out.printf("%5d%5d%n",frequencyWin,frequencyLoss);
+				if(result == "WON") {
+					if(r < 20) {
+					++holdWin[r];
+					} else if(r > 20) {
+						++holdWin[21];
+					}
+				}
+				if(result == "LOST") {
+					if(r < 20) {
+						++holdLoss[r];
+					} else if(r > 20) {
+						++holdLoss[21];
+					}
+				}
+				//System.out.printf("%d%5d%5d%n",r,holdWin[r],holdLoss[r]);
 				}
 				//int myPoint = 0;	
 				//	

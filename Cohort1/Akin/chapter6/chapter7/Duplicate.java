@@ -6,12 +6,12 @@ public class Duplicate {
 
 	public static boolean searchArray(int[] array, int number) {
 		
-		boolean status = false;
+		boolean status = true;
 		
 		for(int i = 0; i < array.length; i++) {
 			
 			if(array[i] == number) {
-				status = true;
+				status = false;
 			}
 			
 		}
@@ -28,10 +28,10 @@ public class Duplicate {
 		for(int i = 0; i < newArray.length; i++) {
 			
 			num = input.nextInt();
-			//String store = "";
-			if(!(searchArray(newArray,num))) {
-				System.out.printf("%d%n", num);
-					//store = store + " " + num;
+
+			if((searchArray(newArray,num))) {
+				//System.out.printf("%d%n", num);
+					
 				newArray[i] = num;
 				
 				
@@ -46,7 +46,6 @@ public class Duplicate {
 				
 			}
 		}
-		
 		input.close();
 	}
 	
