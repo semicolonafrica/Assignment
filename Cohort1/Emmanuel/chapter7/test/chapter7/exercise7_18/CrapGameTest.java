@@ -15,7 +15,7 @@ public class CrapGameTest {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		CrapGame.calRoll();
+		CrapGame.calRoll();     //ERROR 
 
 	}
 

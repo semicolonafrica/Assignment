@@ -75,8 +75,8 @@ public class TableOfNumber {
 		for(int i = 1; i <= 256; i++) {
 			System.out.printf("%d\t\t%-7s%11s\t\t%s%n",i, generateBinary(i), generateOctal(i),generateHexadecimal(i) );
 			 if( i % 10 == 0) {
-				 for(int j = 1; j <= 17; j++) {
-					 System.out.print("___");
+				 for(int j = 1; j <= 18; j++) {
+					 System.out.print("**");
 				 }
 				 System.out.println();
 			 }

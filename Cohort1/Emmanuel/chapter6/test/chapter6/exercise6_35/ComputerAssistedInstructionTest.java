@@ -15,7 +15,7 @@ public class ComputerAssistedInstructionTest {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		// ComputerAssistedInstruction.generateQuestions(x, y);
+		ComputerAssistedInstruction.multiplication();;
 
 	}
 

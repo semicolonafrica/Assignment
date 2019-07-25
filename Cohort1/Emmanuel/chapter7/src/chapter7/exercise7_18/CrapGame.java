@@ -100,45 +100,33 @@ public class CrapGame {
 		 
 		 int [] freqWin = new int [25];
 		 int [] freqLoss = new int [25];
-		 int winGame =0; 
-		 int lossGame =0;
+//		 int winGame =0; 
+//		 int lossGame =0;
 		 
-		 for(int i = 1; i < 5; i++) {
+		 for(int i = 1; i < 1000_000; i++) {
 			 
 			 int roll = checkGame();
-//			 if(gameStatus == Status.WON) {
-//				 ++freqWin[roll];
-//			 }
-//			 if(gameStatus == Status.LOST) {
-//				 ++freqLoss[roll];
-//			 }
-
-				try {
-
-				if(gameStatus == Status.WON ) {
-					++freqWin[roll];
-
-				}
-				else {
+			 
+			 try {
+			 if(gameStatus == Status.WON) {
+				 ++freqWin[roll];
+			 }
+			 else
+				 if(gameStatus == Status.LOST) {
 				 ++freqLoss[roll];
-
-				}	
-				}
-				catch(ArrayIndexOutOfBoundsException e) {
+				 }
+			 }
+			 catch(ArrayIndexOutOfBoundsException e) {
 					System.out.println(e);
 
-				}
-		
+			}
+
 		 }
+		 
 		 displayArray(freqWin, freqLoss);
 			System.out.println();
 
-			winGame = sumArray(freqWin);
-			lossGame = sumArray(freqLoss);
 
-			double chance = (double)winGame/(winGame + lossGame);
-
-			System.out.printf("%nElement of chance is: %.3f%n%n", chance);
 	 }
 	
 	 
@@ -147,19 +135,11 @@ public class CrapGame {
 		 System.out.printf("%2s%5s%5s%n","Rolls","Win","Loss");
 		 
 		 for(int count = 1; count < array.length; count++) {
-				System.out.printf("%2d%1d%2 d%n", count, array[count], array2[count]);
+				System.out.printf("%2d%10d%10d%n", count, array[count], array2[count]);
 				//System.out.println();
 			}
 	 }	
-	 
-	 public static int sumArray(int[] array) {
-			int total = 0;
 
-			for(int value: array) {
-				total+= value;
-			}
-			return total;
-		}
 }
 
 
