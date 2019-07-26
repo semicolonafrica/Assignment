@@ -21,11 +21,6 @@ public class Time {
 		this(hour,minute,0);
 	}
 	
-	
-//	public Time(int second) {
-//		this(0,0,second);
-//	}
-	
 	public Time(int hour, int minute, int second) {
 		if(hour < 0 || hour >= 24) {
 			throw new IllegalArgumentException("hour must be 0-23");
@@ -80,13 +75,22 @@ public class Time {
 		this.second = second;
 	}
 	
-	public int getHour() {
+	public int getHour1() {
 		int newhour = hour * 3600;
 		return newhour;
 	}
 	
-	public int getMinute() {
+	public int getMinute1() {
 		int newMinute = minute * 60;
+		return newMinute;
+	}
+	public int getHour() {
+		
+		return hour;
+	}
+	
+	public int getMinute() {
+		
 		return minute;
 	}
 	
@@ -96,21 +100,46 @@ public class Time {
 	}
 	
 	public String toUniversalString() {
-		return String.format("%02d:%02d:%02d", getHour(), getMinute(), getSecond());
+		return String.format("%02d:%02d:%02d", incrementHour(), incrementMinute(), tick());
 	}
 	
+	public int tick() {
+		
+		int newSecond = getSecond() + 1; 
+		
+		return newSecond;
+		
+	}
+	
+	public int incrementMinute() {
+		
+		int incMinute = getMinute() + 1;
+		
+		return incMinute;
+		
+	}
+	
+	public int incrementHour() {
+		int incHour = 0;
+		if(hour > 0 && hour <= 12) {
+		incHour = getHour() + 1;
+		}else {
+			//System.out.printf("You have moved to the next day",hour);
+		}
+		return incHour;
+	}
 	
 	
 	public String toString()
 	{
 		return String.format("%d:%02d:%02d %s",
-				((getHour() == 0 || getHour() == 12) ? 12 : getHour() % 12),
-				getMinute(), getSecond(), (getHour() < 12 ? "AM" : "PM"));
+				((incrementHour() >= 0 && incrementHour() <= 12) ? incrementHour() : incrementHour() % 12),
+				((incrementMinute() >= 0 && incrementMinute() < 60) ? incrementMinute() : incrementMinute() % 60), ((tick() >= 0 && tick() < 60) ? tick() : tick() % 60), (incrementHour() < 12 ? "AM" : "PM"));
 	}
 	
 	public int addSecond() {
 		int sum;
-		sum = getHour() + getMinute() + getSecond();
+		sum = getHour1() + getMinute1() + getSecond();
 		return sum;  
 	}
 	

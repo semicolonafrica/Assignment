@@ -12,7 +12,7 @@ public class SieveOfErathosthenes {
 			predicate[i] = true;
 		}
 		
-		for(int i = 2; i < predicate.length; i++) {
+		for(int i = 2; i < predicate.length / 3; i++) {
 			if(predicate[i] == true) {
 			for(int j = i + 1; j < predicate.length; j++) {
 				if(j % i == 0) {
@@ -21,18 +21,20 @@ public class SieveOfErathosthenes {
 			}
 			}
 		}
-		
+		int v = 0;
 		for(int i = 2; i < predicate.length; i++) {
 
-
+			
 			if(predicate[i] == true) {
-
-				System.out.printf("%d ", i);
-				if(i % 6 == 0) {
+				v++;
+				System.out.printf("%d   ", i);
+				if(v % 10 == 0) {
 					System.out.println();
 				}
+
 			}
 
+			
 		}
 		
 		

@@ -23,10 +23,8 @@ public class SavingsAccountTest {
 		//SavingsAccount.setAnnualInterestRate(0.04);
 		System.out.printf("Interest Rate: %.2f%n", SavingsAccount.getAnnualInterestRate());
 		System.out.printf("%s%10s%n%n","Saver1", "Saver2");
-		value1 = 0.0;
-		value2 = 0.0;
-		saver1.setSavingsBalance(2000);
-		saver2.setSavingsBalance(3000);
+
+
 		for(int i = 1; i <= 12; i++) {
 
 			value1 = saver1.modifySavingsBalance();

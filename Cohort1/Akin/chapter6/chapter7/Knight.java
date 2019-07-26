@@ -33,7 +33,8 @@ public class Knight {
 		vertical[6] = 2;
 		vertical[7] = 1;
 		
-		int moveNum = 0;int[] array, int number
+		int moveNum = 0;int[] array;
+		int number;
 		int count = 0;
 		int currentRow = 0, currentColumn = 0;
 		
