@@ -5,7 +5,8 @@ import java.security.SecureRandom;
 public class CoinToss {
 	
 	private enum Status{ HEAD,TAIL};
-	//int sumOfCoin = (int)tossCoin();
+	
+	
 	
 	public static void tossCoin() {
 		SecureRandom randomNumbers = new SecureRandom();
