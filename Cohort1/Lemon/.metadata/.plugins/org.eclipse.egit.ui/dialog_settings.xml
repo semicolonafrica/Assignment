@@ -7,11 +7,14 @@
 		<item value="LEMON &lt;joshval.lj@gmail.com&gt;"/>
 	</list>
 	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
-		<item key="HORIZONTAL_SASH_FORM_WEIGHT" value="200,200"/>
-		<item key="STAGING_SASH_FORM_WEIGHT" value="200,200"/>
+		<item key="HORIZONTAL_SASH_FORM_WEIGHT" value="574,421"/>
+		<item key="STAGING_SASH_FORM_WEIGHT" value="319,675"/>
 		<item key="sortItemState" value="false"/>
 	</section>
 	<section name="GitCommitMessageComponent">
+		<list key="C:\Users\LEMON\Desktop\Assignment\.git">
+			<item value="empty"/>
+		</list>
 	</section>
 	<section name="org.eclipse.egit.ui.internal.push.PushResultDialog.dialogBounds">
 		<item key="DIALOG_X_ORIGIN" value="358"/>
