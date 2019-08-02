@@ -1,7 +1,6 @@
 package chapter8.exercises;
 
 public class SavingsAccountTest {
-
 	public static void main(String[] args) {
 		
 		SavingsAccount lem = new SavingsAccount(2000);
