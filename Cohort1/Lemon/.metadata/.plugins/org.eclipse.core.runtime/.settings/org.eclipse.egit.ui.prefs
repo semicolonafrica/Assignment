@@ -4,7 +4,7 @@ StagingView_FileNameMode=false
 StagingView_Presentation=TREE
 StagingView_ShowNewCommits=true
 StagingView_SyncWithSelection=false
-commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<messages>\r\n<message>try</message>\r\n<message>bulk of files in folder</message>\r\n<message>demo file</message>\r\n<message>getting exponential</message>\r\n<message>crap game</message>\r\n<message>pair programming with gbemi</message>\r\n</messages>
+commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<messages>\r\n<message>ok</message>\r\n<message>try</message>\r\n<message>bulk of files in folder</message>\r\n<message>demo file</message>\r\n<message>getting exponential</message>\r\n<message>crap game</message>\r\n<message>pair programming with gbemi</message>\r\n</messages>
 date_format_choice=LOCALE
 eclipse.preferences.version=1
 resourcehistory_graph_split=674,325
