@@ -2,7 +2,6 @@ package exercise7_28;
 
 
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
 
 public class AnimalRace {
 
@@ -18,7 +17,7 @@ public class AnimalRace {
 	public void simulateRace() {
 		int moveNo;
 		
-		System.out.printf("BANG!!!!!%nAND THEY'RE OFF!!!!%n");
+		System.out.printf("BANG !!!!!%nAND THEY'RE OFF !!!!%n");
 		
 		while(tortoise < 70 && hare < 70) {
 		
@@ -48,13 +47,13 @@ public class AnimalRace {
 			
 		
 			if(tortoise >= 70 && hare < 70) {
-				System.out.println("\nTortoise Wins!!!!YAY!!!!");
-				System.out.println("Rewarded with a pail of fresh carrots and lettuce  {*}");
+				System.out.println("\nTortoise Wins!!!!YAY!!!!\n");
+				System.out.println("Rewarded with a pail of fresh carrots and lettuce {*}");
 			
 			}
 			else if(hare >= 70 && tortoise < 70) {
-				System.out.println("\nHare Wins.Yuch");
-				System.out.println("Rewarded with a pail of fresh carrots and lettuce  {*}");
+				System.out.println("\nHare Wins.Yuch\n");
+				System.out.println("Rewarded with a pail of fresh carrots and lettuce {*}");
 			}
 			else if(hare == tortoise) {
 				System.out.println("It's a tie");
