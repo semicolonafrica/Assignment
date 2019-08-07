@@ -6,38 +6,18 @@ public class Date {
 	private int day;
 	private int year;
 	
+	
 	private static final int[] daysPerMonth = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 	
 	// constructor: confirm proper value for month and day given the year
 	
 	public Date(int month, int day, int year)
 	{
-		// check if month in range
-		if(month <= 0 || month > 12)
-			throw new IllegalArgumentException(
-			"month (" + month + ") must be 1-12"); 
+		month = checkMonth(month);
+		year = checkYear(year);
+		day = checkDay(day);
 		
-		//check if day in range for month
-		if(day <= 0 || (day > daysPerMonth[month] && !(month == 2 && day == 29)))
-			throw new IllegalArgumentException("day (" + day +
-					") out-of-range for the specified month and year");
-		
-		//check for leap year if month is 2 and day is 29
-		if(month == 2 && day == 29 && !(year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)))
-			throw new IllegalArgumentException("day (" + day +
-					") out-of-range for the specified month and year");
-	
-		//check if year in range
-		if(year >= daysPerMonth[1] && year <= daysPerMonth[12])
-			throw new IllegalArgumentException("year (" + year + ") is out of range");
-		
-		
-		this.month = month;
-		this.day = day;
-		this.year = year;
-		
-		System.out.printf("Date object constructor for date %s%n%n", this);
-		
+		System.out.printf("Date object constructor for date %s%n", toString());
 	}
 	
 	
@@ -70,27 +50,71 @@ public class Date {
 		this.year = year;
 	}
 
+	
 
 	public String toString() {
-		return String.format("%d/%d/%d",month,day,year);
+		return String.format("%d/%d/%d",getMonth(),getDay(),getYear());
 	}
 	
-	public int nextDay() {
+	public void nextDay() {
 		
-		int value = getDay() + 1;
+		int testDay = day + 1;
 		
-		return value;
-		
+		if(day == testDay) {
+			day = testDay;
+		} 
+			day = 1;
+			nextMonth();
 		
 	}
 	
-	public int incMonth() {
-		return getMonth() + 1;
+	public  void nextMonth() {
+		if(month == 12) {
+			year++;
+		}
+		month = month % 12 + 1;
 	}
 	
-	public int incYear() {
-		return getYear() + 1;
+	public int checkYear(int year) {
+		if(year > 0) {
+			return year;
+		} else {
+			System.out.printf("Invalid year %d", year);
+			return 1;
+		}
 	}
+	
+	public int checkMonth(int month) {
+		int newmonth = 1;
+		if(month > 0 && month <= 12) {
+			newmonth = month;
+			return newmonth;
+		} else {
+			System.out.printf("Invalid month %d", month);
+			newmonth  = 1;;
+		}
+		return newmonth;
+	}
+	
+	public int checkDay(int day) {
+		
+		int[] daysPerMonth = { 0,31,28,31,30,31,30,31,31,30,31,30,31 };
+		
+		if(day > 0 && day <= daysPerMonth[month]) {
+			return day;
+		}
+		
+		if(month == 2 && day == 29 && year % 400 == 0 || 
+				year % 4 == 0 && year % 100 != 0) {
+			return day;
+		} else {
+		System.out.printf("Invalid day %d.", day);
+		return 1;
+		}
+	}
+	
+	
+
 	
 	
 }
