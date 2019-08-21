@@ -1,0 +1,15 @@
+)"r","yp.tupni"(nepo = elif_tupni
+)"w","txt.tupni"(nepo = elif_tuptuo
+
+:elif_tupni ni rts_enil rof
+'' = rts_wen
+)(pirts.rts_enil = rts_enil
+:rts_enil ni rahc rof
+rts_wen + rahc = rts_wen
+)elif_tuptuo=elif ,rts_wen(tnirp
+
+
+ssergorp evresbo nac ew os llehs ot tnirp a edulcni#
+))rts_wen ,rts_enil(tamrof.'}s:{ :si desrever }s21:{ :eniL'(tnirp
+)(esolc.elif_tupni
+)(esolc.elif_tuptuo
