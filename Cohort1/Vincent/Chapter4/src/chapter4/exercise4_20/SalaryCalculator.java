@@ -13,15 +13,25 @@ public class SalaryCalculator{
 
     public static void calculateSalary(){
         Scanner input = new Scanner(System.in);
-        int fixedSalary = 40;
+        int fixedHour = 40;
         int counter = 1;
+        int employee = 1;
+        int numberOfHours;
+        int hourRate;
+        int total=0;
+       
         while (counter <= 3){
+        	System.out.printf("Employee%d: ", employee++);
             System.out.println("enter number of hours worked"); // prompt to enter the hours worked
-            int numberOfHours = input.nextInt();
-          
-            int hourlyRate = numberOfHours * fixedSalary;
+            numberOfHours = input.nextInt();
+            numberOfHours += fixedHour;
+            System.out.println("enter hourRate"); 
+            hourRate = input.nextInt();
+    
+            total = hourRate * numberOfHours ;
+            
             System.out.println();
-            System.out.printf("hourly rate is: %d\n", hourlyRate);
+            System.out.printf("Employee gross pay is : %d\n", total);
             
             counter++; 
             
