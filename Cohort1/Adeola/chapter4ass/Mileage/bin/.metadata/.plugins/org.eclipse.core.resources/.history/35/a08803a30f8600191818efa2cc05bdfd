@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class CreditLimitCalTest {
+	int accountNumber;
+	int initialBalance;
+	int charges;
+	int totalCredits;
+	int creditLimit;
+	private int newBalance;
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter account number: ");
+		int accountNumber = input.nextInt();
+		
+		System.out.println("Enter initial number: ");
+		int initialBalance = input.nextInt();
+		
+		System.out.println("Enter totalItem number: ");
+		int charges = input.nextInt();
+		
+		System.out.println("Enter total credit : ");
+		int totalCredits = input.nextInt();
+		
+		System.out.println("Enter credit limit: ");
+		int creditLimit = input.nextInt();
+		
+	
+		public int newBalance1() {
+			newBalance = initialBalance + charges - totalCredits;
+			return newBalance;
+		}
+		
+		
+		
+
+	}
+
+}
