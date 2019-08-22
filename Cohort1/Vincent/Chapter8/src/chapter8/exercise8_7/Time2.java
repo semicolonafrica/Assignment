@@ -89,7 +89,7 @@ public class Time2 {
 	     public String toUniversalString()
 	 {
 	 return String.format(
-	 "%02d:%02d:%02d", getHour(), getMinute(), getSecond() );
+	 "%02d:%02d:%02d", getHour(),getMinute(), getSecond() );
 	 } // end method toUniversalString
 
 	 // convert to String in standard-time format (H:MM:SS AM or PM)
