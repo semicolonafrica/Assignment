@@ -11,8 +11,8 @@ public class TurtleGraphics {
 	static int direction = 1;
 	static int value;
 	
-	System.out.print("Enter value:");
-	 value = in.nextInt();	
+	//System.out.print("Enter value:");
+	 //value = in.nextInt();	
 
 	
 	private enum Pen{UP, DOWN};	
@@ -21,12 +21,12 @@ public class TurtleGraphics {
 		}
 	public static void penUp() {
 		if(value == 1){
-			Pen DOWN;
+			//Pen.DOWN;
 			}
 		}
 	public static void penDown() {
 		if(value == 2) {
-			Pen UP;
+			//Pen.UP;
 		}
 	}
 	public static void turnLeft() {
@@ -73,7 +73,7 @@ public class TurtleGraphics {
 		System.out.print(floor[row][column]);
 		column--;
 	}
-	public static int dispalyFloor() {
+	public static void dispalyFloor() {
 		if(value == 6) {			
 		for(row = 0; row < floor.length; row++) {
 			for(int column = 0; column <= floor[row].length; column++) {
@@ -81,7 +81,7 @@ public class TurtleGraphics {
 			}
 		}
 	}
-		System.out.print(floor[row][column]);				
+		System.out.print(floor[row][column]);
 }
 	
 	public static void display() {

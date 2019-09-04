@@ -13,19 +13,19 @@ public class SavingsAccount {
 	public static void setAnnualInterestRate(double annualInterestRate) {
 		SavingsAccount.annualInterestRate = annualInterestRate;
 	}
-	public double getSavingsBalance() {
-		savingsBalance = savingsBalance + calculateMonthlyInterest(); 
-		return savingsBalance;
-	}
+//	public double getSavingsBalance() {
+//		savingsBalance = savingsBalance + calculateMonthlyInterest(); 
+//		return savingsBalance;
+//	}
 	public void setSavingsBalance(double savingsBalance) {
 		this.savingsBalance = savingsBalance;
 	}
 	public double calculateMonthlyInterest() {		
 		double monthlyInterest = (savingsBalance * annualInterestRate) / 12;
-		return monthlyInterest;
+		return savingsBalance+monthlyInterest;
 	}
-	public static double modifyInterestRate() {
-		double annualInterestRate = 6;
+	public static double modifyInterestRate(double annualInterestRate) {
+		SavingsAccount.annualInterestRate=annualInterestRate;
 		return annualInterestRate;		
 	}	
 }
