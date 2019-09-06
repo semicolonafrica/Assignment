@@ -25,5 +25,6 @@ public class Pairs {
 			else
 				System.out.println(false);
 		}
+		input.close();
 	}
 }

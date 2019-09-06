@@ -16,6 +16,8 @@ public class Circle {
 		double result = pi *(r * r);
 		
 		System.out.printf("Area of Circle = %.2f", result);
+		
+		input.close();
 	}
 	
 	

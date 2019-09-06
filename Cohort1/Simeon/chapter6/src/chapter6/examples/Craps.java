@@ -61,8 +61,9 @@ public class Craps
 		// display won or lost message
 		if (gameStatus == Status.WON)
 			System.out.println("Player wins");
-		else
+		else 
 			System.out.println("Player loses");
+			
 	}
 	
 	// roll dice, calculate sum and display results

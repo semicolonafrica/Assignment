@@ -18,7 +18,7 @@ public class Exponent {
 		
 		for (int i = 1; i <= exponent; i++)
 			result *= base;
-		
+		input.close();
 		return result;
 	}
 	
