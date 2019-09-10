@@ -4,7 +4,8 @@ public class Rational {
 
 	
 	private int numerator;
-	private int denominator;	
+	private int denominator;
+	
 	
 	public Rational() {
 		
@@ -29,7 +30,7 @@ public class Rational {
 		
 	}
 	
-	public Rational subtract( Rational value) {
+	public Rational subtract(Rational value) {
 		int resultDenominator = denominator * value.denominator;
 		int resultNumerator = numerator * value.denominator - value.numerator * denominator;
 		
@@ -37,13 +38,13 @@ public class Rational {
 		
 	}
 	
-	public Rational multiply( Rational value) {
+	public Rational multiply(Rational value) {
 			
 		return new Rational( numerator * value.numerator, denominator * value.denominator);
 		
 	}
 
-	public Rational divide( Rational value) {
+	public Rational divide(Rational value) {
 		
 		return new Rational( numerator * value.denominator, denominator * value.numerator);
 		
