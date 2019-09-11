@@ -105,21 +105,25 @@ public class Time2 {
 	public int getSecond() {return second;}
 	
 	public int tick() {
-		 int incSecond = getSecond();
-		 ++incSecond;
-		 return incSecond;
+		 int second = getSecond();
+		 
+		 ++second;
+		 return second;
 	}
 	
 	public int incrementMinute() {
-		 int incMinute = getMinute();
-		 ++incMinute;
-		 return incMinute;
+		 int minute = getMinute();
+		 if(minute>=0 && minute<=59) {
+			++ minute; 
+		 }
+		 
+		 return minute;
 	}
 	
 	public int incremenHour() {
-		 int incHour = getHour();
-		 ++incHour ;
-		 return incHour;
+		 int hour = getHour();
+		 ++hour ;
+		 return hour;
 	}
 
 	// convert to String in universal-time format (HH:MM:SS)
