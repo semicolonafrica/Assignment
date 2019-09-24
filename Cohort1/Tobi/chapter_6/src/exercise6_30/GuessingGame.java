@@ -19,7 +19,7 @@ public class GuessingGame {
 		System.out.println("Guess a number between 1 - 1000");
 		value = generateNumbers();
 		
-		while(range != Mode.Yes) {
+			do{
 			guess = in.nextInt();
 			
 			if(guess > value) {
@@ -36,7 +36,9 @@ public class GuessingGame {
 				break;
 			}
 			tries++;
-		}
+			}while(range != Mode.Yes);
+			
+		
 			if(tries <= 10) {
 				
 				System.out.println("Either you know the secret or you got lucky!\n");

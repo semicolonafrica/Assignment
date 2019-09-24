@@ -2,57 +2,53 @@ package exercise8_11;
 
 public class Complex {
 
-	private double []array1 = new double[2];
-	private double [] array2 = new double[2];
+	private double real;
+	private double imaginary;
 	
-	private static double[] defZ = {2.0,5.0}; //set default values of array1
 	
-	private static double[] defA= {3.0, 2.0}; //set default values of array2
-	
-	public Complex(double[] array1, double [] array2) {
+	public Complex(double real, double imaginary) {
 		
-		this.array1 = array1;
-		this.array2 = array2;
+		this.real = real;
+		this.imaginary = imaginary;
+		
 	}
 	
 	public Complex() {
 		
-		this(defZ, defA);
+		this(5, 7);
 		
 	}
 	
-	public double[] getArray1() {
-		return array1;
+	public double getReal() {
+		return real;
 	}
 
-	public void setArray1(double[] array1) {
-		this.array1 = array1;
+	public void setReal(double real) {
+		this.real = real;
 	}
 
-	public double[] getArray2() {
-		return array2;
+	public double getImaginary() {
+		return imaginary;
 	}
 
-	public void setArray2(double[] array2) {
-		this.array2 = array2;
+	public void setImaginary(double imaginary) {
+		this.imaginary = imaginary;
+	}
+
+	public String addComplexNumbers(Complex obj) {
+		
+		double addReal = this.getReal() + obj.getReal();
+		double addImaginary = this.getImaginary() + obj.getImaginary();
+		
+		return String.format("%.2f, %.2f%s", addReal, addImaginary,"i");
 	}
 	
-	public String addComplexNumbers() {
+		public String subtractComplexNumbers(Complex obj) {
 		
-		double real = array1[0] + array2[0];
-		double imaginary = array1[1] + array2[1];
+		double subReal = this.getReal() - obj.getReal();
+		double subImag = this.getImaginary() - obj.getImaginary();
 		
-		
-		return String.format("%.2f, %.2f%s", real, imaginary,"i");
-	}
-	
-		public String subtractComplexNumbers() {
-		
-		double real = array1[0] - array2[0];
-		double imaginary = array1[1] - array2[1];
-		
-		
-		return String.format("%.2f, %.2f%s", real, imaginary,"i");
+		return String.format("%.2f, %.2f%s", subReal, subImag,"i");
 	}
 
 }

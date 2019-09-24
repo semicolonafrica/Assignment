@@ -42,14 +42,13 @@ public class KnightTour {
 			currentRow = moveR;
 			currentCol = moveC;
 			leastAccess = 8;
+			
 		}
+		
 		
 	}
 		
-
-		
-	
-	
+			
 }
 	
 	displayChessBoard();
@@ -68,6 +67,12 @@ public class KnightTour {
 				
 				if(accessibility[row][col] == 0) {
 					System.out.print(" k ");
+				}
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
 				}
 			}
 			System.out.println();

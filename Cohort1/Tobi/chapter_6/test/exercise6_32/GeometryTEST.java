@@ -21,9 +21,9 @@ public class GeometryTEST {
 			
 			Geometry.y2 = in.nextDouble();
 			
-			System.out.printf("Distance between the points is: %.3f", Geometry.findDistance());
+			System.out.printf("Distance between the points is: %f", Geometry.findDistance());
 			
-			
+			in.close();
 
 		}
 	}

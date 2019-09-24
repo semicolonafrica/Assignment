@@ -21,7 +21,7 @@ public class IntegerSet {
 		
 		for(int j = 0; j < SIZE;  j++) {
 			
-			if(setA.getSet(j) == true || setB.getSet(j) == true) {
+			if(setA.getAllSet()[j] == true || setB.getAllSet()[j] == true) {
 				newSet[j] = true;
 			}
 			else 
@@ -39,7 +39,7 @@ public class IntegerSet {
 		 
 		 for(int i = 0; i < SIZE; i++) {
 			 
-			 if(setA.getSet(i) ==  false|| setB.getSet(i) == false) {
+			 if(setA.getAllSet()[i] ==  false|| setB.getAllSet()[i] == false) {
 					newSet[i] = false;
 				}
 			 else newSet[i] = true;

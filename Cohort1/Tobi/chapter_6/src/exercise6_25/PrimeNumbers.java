@@ -6,26 +6,15 @@ public class PrimeNumbers {
 		
 		int prime = 0, div = 1;
 		boolean result = false;
-		 // divide number by 2
+		 
 			div = number  / 2;
-			
 
 			for(int f = 2; f <= div; f++) {
-			
-//				if(number ==2 || number == 3) {
-//					
-//					div = number / 1;
-//					result = true;
-//				}
-//				 prime = number % f;
 				 if(number % f == 0) {
 					 return false;
 					
 				 }
-			}// end of loop 
-			
-//			if (prime != 0)
-//				System.out.println(number + "");
+			}
 				return true;
 			
 			
@@ -74,17 +63,18 @@ public class PrimeNumbers {
 
 	public static void main(String[] args) {
 //		String store = " ";
-		for(int i = 1; i <= 1000; i++) 
+		for(int i = 1; i <= 1000; i++) {
 			
 			if(findPrime(i) == true) 
-				System.out.println(i);
+				System.out.print(i + " ");
+			if( i % 10 == 0) {
+				System.out.println();
+			}
+		}
 			
-		
-			
-//			primeRoot();
-		
 		
 
 	}
-
+	
+	
 }

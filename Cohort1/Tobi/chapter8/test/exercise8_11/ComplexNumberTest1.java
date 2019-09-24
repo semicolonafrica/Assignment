@@ -16,17 +16,16 @@ public class ComplexNumberTest1 {
 		double real = input.nextDouble();
 		double imaginary = input.nextDouble();
 		
-		double temp1 [] = {real, imaginary};
+		Complex obj1 = new Complex(real, imaginary);
 		
 		System.out.println("Enter complex number values:(real, imaginary)");
 		double real1 = input.nextDouble();
 		double imaginary1 = input.nextDouble();
 		
-		double temp2 [] = {real1, imaginary1};
 
-		Complex bamn = new Complex(temp1, temp2);
+		Complex obj2 = new Complex(real1, imaginary1);
 		
-		System.out.println(bamn.addComplexNumbers());
+		System.out.println(obj1.addComplexNumbers(obj2));
 		}
 		catch(InputMismatchException e) {
 			System.out.println("Error!! double value expected");

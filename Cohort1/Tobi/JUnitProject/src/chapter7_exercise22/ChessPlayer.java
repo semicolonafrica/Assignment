@@ -14,7 +14,6 @@ public class ChessPlayer {
 		
 		
 		if(moveNumber < 0 || moveNumber > 7) {
-			System.out.println("%d is not a valid movenumber");
 			throw new IllegalArgumentException("Invalid MoveNumber");
 		}
 		
@@ -27,7 +26,7 @@ public class ChessPlayer {
 		
 		
 		if (tempRow < 0 || tempRow > 7 || tempCol < 0 || tempCol > 7) {
-			System.out.println("Knight cant move out of chessBoard");
+			
 			throw new ArrayIndexOutOfBoundsException("Not a valid move from current position");
 			
 		}

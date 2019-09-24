@@ -1,5 +1,7 @@
 package exercise7_27;
 
+import java.util.Arrays;
+
 /**
  * @author tboydev
  *When this process completes, the array elements that are still true indicate that the index is a
@@ -33,16 +35,19 @@ public class PrimeArray {
 		}
 		
 		int br = 0;
-		for(int j = 1; j < prime.length; j++) {
+		System.out.println("Prime Numbers: \n");
+		for(int j = 2; j < prime.length; j++) {
 			
-			if(prime[j] == true) {
-			System.out.printf("%2d  ", j);
+			if(prime[j] == true ) {
+			System.out.printf("%3d  ", j);
 			br++;
+			
+				if(br % 5== 0) {
+				System.out.println("\n");
+				}
 			}
 			
-			if(br % 5== 0) {
-				System.out.println();
-			}
+			
 			
 				
 		}
@@ -50,10 +55,7 @@ public class PrimeArray {
 	}
 	public void setValues() {
 		
-		for(int i = 0; i < prime.length; i++) {
-			
-			prime[i] = true;
-		}
+		Arrays.fill(prime, true);
 	}
 
 }

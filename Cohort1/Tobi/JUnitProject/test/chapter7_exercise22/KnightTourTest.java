@@ -209,13 +209,13 @@ class KnightTourTest {
 			buff.moveKnight(knightObj, myBoard, moveNumber);
 			}
 			catch(ArrayIndexOutOfBoundsException e){
-				
+				System.out.println("is not a valid movenumber");
 			}
 			catch(IllegalArgumentException e) {
-				
+				System.out.println("Invalid MoveNumber");
 			}
 			catch(InputMismatchException e) {
-				
+				System.out.println("Invalid moveNumber");
 			}
 			System.out.printf("Knights Current Position is: (%d, %d)%n"  , myBoard.getMyKnight().getCurrentRow(), myBoard.getMyKnight().getCurrentColumn());
 			
@@ -236,7 +236,9 @@ class KnightTourTest {
 			System.out.println();
 		}
 		
+		
 	}
+	
 	
 
 }

@@ -26,8 +26,6 @@ public class RationalNumbers {
 		}
 		
 		
-		
-		
 	}
 	
 	
@@ -78,12 +76,9 @@ public class RationalNumbers {
 		
 		deno = lcm / deno;
 		deno1 = lcm / deno1;
-		
 		num = deno * num;
 		num1 = deno1 * num1;
-		
 		num = num - num1;
-		
 		
 		
 		return new RationalNumbers(num, lcm);
@@ -97,6 +92,7 @@ public class RationalNumbers {
 		int num = object1.getNumerator();
 		int num1 = object2.getNumerator();
 		
+		//swap object 2 numerator and denominator
 		int temp = num1;
 		num1 = deno1;
 		deno1 = temp;
@@ -151,7 +147,7 @@ public class RationalNumbers {
 		int remainder = 0; // stores remainder of division
 
 		if(num1 > num2) {
-			a = num1;
+			a = num1 ;
 			b = num2;
 		}
 		else {
@@ -168,6 +164,10 @@ public class RationalNumbers {
 			b = remainder;
 				
 			remainder = modulo(a, b);
+			if(remainder < 0) {
+				b = remainder * -1;
+				break;
+			}
 		}
 		
 		return b;

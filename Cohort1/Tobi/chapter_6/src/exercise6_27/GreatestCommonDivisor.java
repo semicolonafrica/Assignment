@@ -30,6 +30,11 @@ public class GreatestCommonDivisor {
 				b = remainder;
 				
 				remainder = modulo(a, b);
+				
+				if(remainder < 0) {
+					b = remainder * -1;
+					break;
+				}
 			}
 			return b;
 		 }

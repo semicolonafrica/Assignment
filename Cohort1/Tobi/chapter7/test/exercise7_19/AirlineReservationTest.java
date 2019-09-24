@@ -13,13 +13,7 @@ public static void main(String[] args) {
 		}
 		catch(InputMismatchException e) {
 			System.out.println(e.getMessage());
-			try {
-				arik.assignSeats();
-			}
-			catch(InputMismatchException c){
-				System.out.println(c.getMessage());
-				System.out.println(arik.bookEconomy());
-			}
+		
 		}
 
 	}

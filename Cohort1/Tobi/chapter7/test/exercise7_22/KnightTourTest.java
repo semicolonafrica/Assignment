@@ -13,7 +13,7 @@ public class KnightTourTest {
 		KnightTour euler = new KnightTour();
 		
 		
-		euler.tourAll();
+		euler.tourKnight();
 		
 	}
 

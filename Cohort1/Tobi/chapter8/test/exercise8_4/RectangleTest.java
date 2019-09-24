@@ -71,12 +71,6 @@ class RectangleTest {
 		assertThrows(IllegalArgumentException.class, ()->testRectangle.calculatePerimeter());
 	}
 	
-//	@Test
-//	void calculatePerimeterWithNegativeLengthTest() {
-//		testRectangle.setLength(-1);
-//		testRectangle.setWidth(5);
-//		assertThrows(IllegalArgumentException.class, ()->testRectangle.calculatePerimeter());
-//	}
 	
 	@Test
 	void calculatePerimeterWithNegativeWidthTest() {
