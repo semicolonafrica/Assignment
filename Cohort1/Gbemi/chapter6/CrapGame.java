@@ -4,16 +4,17 @@ import java.security.SecureRandom;
 
 public class CrapGame {
 	
-	private int two = 2;
-	private int three = 3;
-	private int seven = 7;
-	private int eleven = 11;
-	private int twelve = 12;
+	static int two = 2;
+	static int three = 3;
+	static int seven = 7;
+	static int eleven = 11;
+	static int twelve = 12;
 	
 	
-	SecureRandom randomNumbers = new SecureRandom();
+	static SecureRandom randomNumbers = new SecureRandom();
 	
-	public  void getResult() {
+	public  static void getResult() {
+		
 		
 	
 		if(sum == seven || sum == eleven) {
@@ -40,7 +41,7 @@ public class CrapGame {
 		 }
 	}
 
-		public int rollDice() {
+		public static int rollDice() {
 			int die1 =1 + randomNumbers.nextInt(6);
 			int die2 = 1 + randomNumbers.nextInt(6);
 			
@@ -49,5 +50,9 @@ public class CrapGame {
 			return sum;
 			
 		}
-		private int sum = rollDice();
+		private static int sum = rollDice();
+		
+		public static void main(String[] args) {
+			getResult();
+		}
 }

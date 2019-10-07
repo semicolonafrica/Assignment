@@ -8,9 +8,11 @@ package chapter6;
  *
  */
 import java.util.Scanner;
+
 public class GreatestCommonDivisorTest {
 	
-	public static void main (String[] args) {
+	public static void main(String[] args) {
+		
 		Scanner input= new Scanner(System.in);
 		System.out.println("enter  two value ");
 		int value1 = input.nextInt();

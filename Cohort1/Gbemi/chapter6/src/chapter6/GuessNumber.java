@@ -10,17 +10,17 @@ package chapter6;
 import java.util.Scanner;
 import java.security.SecureRandom;
 public class GuessNumber {
-	public static void guessNumber(int number) {
+	public static void guessNumber() {
 		
 		Scanner input =new Scanner(System.in);
 		
 		SecureRandom randomNumbers= new SecureRandom();
 		
-		//for (int counter=1;counter<=20;counter++) {
+	
 			
-			 number= 1+ randomNumbers.nextInt(20);
+			 int number= 1+ randomNumbers.nextInt(100);
 			 int counter=1;
-			 int value=1;
+			 int value=-1;
 			 System.out.println("enter the number you want to guess");
 			 
 			 		while(number!=value) {
@@ -30,16 +30,16 @@ public class GuessNumber {
 				
 				if(value==number) {
 					System.out.println(" congratulation");
-					//break;
+					
 				}
 				else if(value<number) {
 					System.out.println("Too low. Try again");
 					
-					//System.out.println(number);
+					
 				}
 				else if(value>number) {
 					System.out.println("Too high. Try again");
-					//System.out.println(number);
+					
 					}
 				
 				counter++;
@@ -58,7 +58,7 @@ public class GuessNumber {
 	
 	
 	public static void main(String[] args) {
-		guessNumber(200);
+		guessNumber();
 	}
 
 }
