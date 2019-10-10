@@ -28,10 +28,10 @@ import java.security.SecureRandom;
 public class SalesCommission {
 	public static void printSales() {
 		SecureRandom randomInput=new SecureRandom();
-		int[] sales= {300,455,687,234,256,456,890,1000,};
+		int[] sales= {300,455,687,234,256,456,890,1000};
 		int[] frequency= new int[10];
-		for(int count=2;count<sales.length;count++) {
-		 ++frequency[sales[count]];
+		for(int count=0;count<sales.length;count++) {
+		 frequency[sales[count]]++;
 		 if(count==10)
 		 System.out.printf("%5d: ", 1000);
 		 

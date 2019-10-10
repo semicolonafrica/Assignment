@@ -42,7 +42,7 @@ public class Fibonacci {
 		array[1]=1;
 		
 		
-		for(int y=2;y<array.length;y++) {
+		for(int y=2;y<=array.length;y++) {
 			
 			array[2]=array[0]+array[1];
 			
