@@ -13,6 +13,6 @@ public class RandomTest {
 		System.out.println("Random numbers between -1 and 1: "+ randomNumbers.randomNumbersBetweenMinus1And1());
 		System.out.println("Random numbers between -3 and 11: "+ randomNumbers.randomNumbersBetweenMinus3And11());
 		
-	}
+	}   
 
 }

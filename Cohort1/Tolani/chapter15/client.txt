@@ -1,0 +1,4 @@
+100 Bob Blue 24.90
+200 Tul Byte 56.90
+400 Men Hun 67.90
+300 Hum Jun 43.89
