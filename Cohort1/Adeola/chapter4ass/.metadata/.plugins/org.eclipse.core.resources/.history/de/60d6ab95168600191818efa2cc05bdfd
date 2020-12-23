@@ -1,0 +1,32 @@
+
+
+public class CreditLimitCalculator {
+	private int accountNumber;
+	private int initialBalance;
+	private int charges;
+	private int totalCredits;
+	private int creditLimit;
+	private int newBalance;
+
+public CreditLimitCalculator(int accountNumber, int initialNumber, int charges, int totalCredits, int creditLimit, int newBalance) {
+	
+}
+
+	
+	public int checkNewBalance() {
+		newBalance = initialBalance + charges - totalCredits;
+		
+		if(newBalance > creditLimit) {
+			System.out.println("credit limit exceeded ");
+	
+		}
+		else {
+			System.out.print("new balance");
+		}
+		return newBalance;
+	}
+	
+	
+
+	
+}

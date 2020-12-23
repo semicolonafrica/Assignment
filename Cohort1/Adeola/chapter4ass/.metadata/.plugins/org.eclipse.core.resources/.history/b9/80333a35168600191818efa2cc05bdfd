@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class CreditLimitCalTest {
+
+	public static void main(String[] args) {
+		
+		CreditLimitCalculator customer1 = new CreditLimitCalculator();
+		
+				
+//		System.out.println(customer1.newBalance());
+		System.out.println(customer1.checkNewBalance());
+
+	}
+
+}
